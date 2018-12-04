@@ -1,0 +1,1914 @@
+@import _fonts.sass
+@import _reset.sass
+@import _vars.sass
+
+html,body
+  height: 100%
+  
+body
+	background: #FFF
+	&::-webkit-scrollbar
+		display: none
+  
+*:before, *:after
+	content: ''
+	display: table-cell
+  
+.wrapper
+  min-height: 100%
+  overflow: hidden
+  // margin: 0 auto
+
+.wrapper-back-white
+	background: #FFF
+
+header
+	height: 1082px
+	position: relative
+	overflow: hidden
+	
+.bold
+	font-weight: bold 
+	
+.container
+	padding-left: 192px
+	margin: 0 auto
+	width: 1271px
+	
+*:focus, *:hover
+	text-decoration: none
+	outline: none
+
+
+.left-menu
+	position: fixed
+	top: 0
+	left: 0
+	background: #FFF
+	width: 384px
+	height: 100%
+	padding: 71px 0 0
+	z-index: 9910
+	transition: 1s
+	-webkit-box-shadow: 0 0 10px 0px #000 
+	box-shadow: 0 0 10px 0px #000 
+	overflow: hidden
+	.logo
+		margin-bottom: 50px
+		text-align: center
+		a
+			img
+				width: 157px
+				transition: 1s
+		
+		a:hover, a:focus
+			text-decoration: none 
+	.menu
+		color: #333333
+		font-family: "Gotham Black"
+		font-size: 22px
+		font-weight: 700
+		line-height: 42px
+		text-transform: uppercase
+		transform: rotate(-90deg)
+		letter-spacing: 8.4px 
+		display: none
+		position: absolute
+		top: 330px
+		width: 100px
+		white-space: nowrap 
+		cursor: pointer
+		.burger
+			display: inline-block
+			width: 40px
+			vertical-align: middle
+			position: relative
+			margin-right: 30px
+			height: 2px
+			span
+				display: inline-block
+				width: 40px
+				background: #333
+				height: 2px
+				vertical-align: top
+			&:before
+				content: ' '
+				position: absolute
+				width: 100%
+				height: 2px
+				background: #333
+				top: 15px
+				left: 0
+				transition: 0.5s
+			&:after
+				content: ' '
+				position: absolute
+				width: 100%
+				height: 2px
+				background: #333
+				bottom: 15px
+				left: 0
+				transition: 0.5s
+		.menu_text
+			display: inline-block
+	.nav
+		padding: 0px 37px 0px 63px
+		overflow: hidden
+		position: absolute
+		top: 278px
+		ul
+			position: relative 
+			li
+				list-style: none
+				color: #333333
+				font-family: "Gotham Pro"
+				font-size: 22px
+				font-weight: 700
+				line-height: 42px
+				text-transform: uppercase
+				padding: 30px 0
+				cursor: pointer
+				white-space: nowrap
+				.submenu
+					display: none
+					padding:  36px 0
+					overflow: hidden
+					white-space: nowrap
+					li
+						color: #333333
+						font-family: "Gotham Pro"
+						font-size: 16px
+						font-weight: 300
+						line-height: 30px
+						padding: 0
+			.has_sub
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					width: 13px
+					height: 10px
+					background: url(../img/icons/keyboard53.png) no-repeat
+					left: -30px
+					top: 45px
+					transition: 0.5s
+					transform: rotate(90deg)
+			.line
+				background: #c2c2c2
+				height: 1px
+				
+.has_sub_active:before
+	transform: rotate(0deg) !important
+	
+.left-menu_active
+	width: 94px
+
+.logo_active
+	a
+		img
+			width: 84px !important
+					
+.center-side
+	height: 1082px
+	position: relative
+	background: linear-gradient(transparent, rgba(0,0,0, 0.77))
+	&:before
+		content: ''
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		bottom: 0		
+		background: url(../img/header-2.png) no-repeat
+		background-size: cover
+		background-position: 50%
+		z-index: -1
+		animation: center-side_background_before 10s infinite linear
+	&:after
+		content: ''
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		bottom: 0		
+		background: url(../img/header-1.png) no-repeat
+		background-size: cover
+		background-position: 50%
+		z-index: -1
+		animation: center-side_background_after 10s infinite linear
+	
+	.head_container
+		width: 1248px
+		margin: 0 auto
+		padding-left: 192px
+		padding-top: 99px 
+		transform: translate3d(0, 150px, 0)
+		opacity: 0
+		transition: 1s
+		// position: absolute
+		z-index: 100
+		a
+			margin-bottom: 200px
+			display: inline-block
+			color: #333333
+			font-family: "Gotham Pro"
+			font-size: 20px
+			font-weight: 300
+			line-height: 79px
+			text-transform: uppercase
+			&:hover
+	 			text-decoration: none
+			.phone
+				display: inline-block
+				width: 36px
+				margin-right: 35px
+			span
+				font-size: 28px
+				margin-left: 24px
+		button
+			width: 292px
+			height: 70px
+			border-radius: 35px
+			background-color: #d51317
+			text-align: center
+			color: #ffffff
+			font-family: "Gotham Pro"
+			font-size: 22px
+			font-weight: 700
+			border: none
+				
+		.first-head
+			color: #ffffff
+			font-family: "Gotham Black"
+			font-size: 69px
+			font-weight: 400
+			line-height: 79px
+			margin-bottom: 57px
+			span
+				color: #d8f0f3
+		.second-head
+			color: #ffffff
+			font-family: "Gotham Pro"
+			font-size: 32px
+			font-weight: 300
+			line-height: 51px
+			margin-bottom: 67px
+			
+	.right-side__bottom
+		position: fixed
+		z-index: 9800
+		top: 40%
+		right: 0
+		height: 60%
+		width: 104px
+		display: flex
+		-webkit-flex-flow: column 
+		-ms-flex-flow: column 
+		flex-flow: column 
+		-webkit-align-items: center 
+		align-items: center 
+		-webkit-justify-content: center 
+		justify-content: stretch
+		transform: translate3d(0, 150px, 0)
+		opacity: 0
+		transition: 1s 
+		color: #FFF
+		.head_scroll-down
+			margin-top: 50px
+			height: 100%
+			width: 54px
+			display: flex
+			-webkit-flex-flow: column 
+			-ms-flex-flow: column 
+			flex-flow: column 
+			-webkit-align-items: center 
+			align-items: center 
+			-webkit-justify-content: center 
+			justify-content: center 
+			background: transparent
+			font-family: "Gotham Pro"
+			font-size: 18px
+			font-weight: 700
+			line-height: 79px
+			text-transform: uppercase
+			letter-spacing: 5.76px
+			position: relative
+			opacity: 0.7
+			p
+				transform: rotate(-90deg)
+				width: 100%
+				margin-bottom: 0px
+				white-space: nowrap
+				color: #FFF
+				background: transparent
+			&_arrow
+				position: absolute
+				bottom: 100px
+				left: 35%
+				width: 20px
+				height: 30px
+				transform: rotate(0deg)
+				background: url(../img/icons/right-arrow.png) no-repeat
+				animation: head_scroll-down_arrow_anim 3s infinite linear
+	.right-side__bottom_active
+		mix-blend-mode: difference
+				
+
+	.right-side
+		position: fixed
+		z-index: 9800
+		top: 0
+		right: 0
+		height: 40%
+		width: 104px
+		display: flex
+		-webkit-flex-flow: column 
+		-ms-flex-flow: column 
+		flex-flow: column 
+		-webkit-align-items: center 
+		align-items: center 
+		-webkit-justify-content: center 
+		justify-content: stretch
+		transform: translate3d(0, 150px, 0)
+		opacity: 0
+		transition: 1s
+		.head_contacts
+			display: flex
+			-webkit-flex-flow: column 
+			-ms-flex-flow: column 
+			flex-flow: column 
+			-webkit-align-items: center 
+			align-items: center 
+			-webkit-justify-content: center 
+			justify-content: center 
+			-webkit-flex-wrap: nowrap 
+			-ms-flex-wrap: nowrap 
+			flex-wrap: nowrap 
+			height: 100%
+			width: 104px
+			background: #FFF
+			color: #333333
+			font-family: "Gotham Pro"
+			font-size: 18px
+			font-weight: 700
+			line-height: 79px
+			text-transform: uppercase
+			letter-spacing: 5.76px
+			cursor: pointer
+			p
+				transform: rotate(-90deg)
+				width: 100%
+				margin-bottom: 0px
+				&:before
+					content: ''
+					position: absolute
+					top: 34px
+					left: -50px
+					width: 14px
+					height: 14px
+					transform: rotate(90deg)
+					background: url(../img/icons/right-side-arrow.png) no-repeat
+		// .head_scroll-down
+		// 	margin-top: 50px
+		// 	height: 50%
+		// 	width: 104px
+		// 	display: flex
+		// 	-webkit-flex-flow: column 
+		// 	-ms-flex-flow: column 
+		// 	flex-flow: column 
+		// 	-webkit-align-items: center 
+		// 	align-items: center 
+		// 	-webkit-justify-content: center 
+		// 	justify-content: center 
+		// 	background: transparent
+		// 	font-family: "Gotham Pro"
+		// 	font-size: 18px
+		// 	font-weight: 700
+		// 	line-height: 79px
+		// 	text-transform: uppercase
+		// 	letter-spacing: 5.76px
+		// 	position: relative
+		// 	mix-blend-mode: difference
+		// 	p
+		// 		transform: rotate(-90deg)
+		// 		width: 100%
+		// 		margin-bottom: 0px
+		// 		white-space: nowrap
+		// 		color: #FFF
+		// 		background: transparent
+			 
+			 // &:after
+			 // 	content: 'листайте вниз'
+			 // 	position: absolute
+			 // 	transform: translate3d(0, -50%, 0)
+			 // 	font-size: 15px
+			 // 	font-weight: 700
+			 // 	line-height: 79px
+			 // 	text-transform: uppercase
+			 // 	letter-spacing: 4.8px
+			 // 	background: transparent
+			 // 	// color: rgb(0, 0, 0)
+			 // &:before
+				// 	content: ''
+				// 	position: absolute
+				// 	top: 26px
+				// 	left: -170px
+				// 	width: 20px
+				// 	height: 30px
+				// 	transform: rotate(90deg)
+				// 	background: url(../img/icons/right-arrow.png) no-repeat
+.head_contact-info
+	width: 0%
+	opacity: 1
+	overflow: hidden
+	position: fixed
+	height: 100vh
+	top: 0
+	right: 0
+	background-color: #323232
+	color: #FFF
+	z-index: 9900
+	transition: 1s
+	.head_contact-info_wrapper
+		padding: 20px 0 0 192px
+		opacity: 0
+		transition: 1s
+	h3
+		color: #ffffff
+		font-family: "Gotham Pro"
+		font-size: 66px
+		font-weight: 700
+		line-height: 79px
+		margin-bottom: 45px 
+	.wrapper-flex
+		display: flex
+		height: 122px
+		-webkit-align-items: top 
+		align-items: top 
+		ul
+			display: inline-block
+			padding: 0 61px 0 28px
+			border-left: 3px solid #d51317
+			height: 122px
+			color: #ffffff
+			font-family: Roboto
+			font-size: 20px
+			font-weight: 300
+			line-height: 34px
+			font-family: "Roboto Light"
+			font-weight: 300
+			li
+				list-style: none
+				white-space: nowrap
+				&:first-child
+					font-family: "Roboto Bold"
+					font-weight: 700
+	.map
+		margin-top: 88px
+		height: 400px
+		width: 1182px
+	.cross
+		position: absolute
+		top: 30px
+		right: 107px
+		height: 61px
+		width: 61px
+		line-height: 61px
+		cursor: pointer 
+		span
+			display: inline-block
+			width: 100%
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 3px
+				background-color: #606060
+				transform: rotate(45deg)
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 3px
+				background-color: #606060
+				transform: rotate(-45deg)
+					
+.head_contact-info_wrapper_active
+	opacity: 1 !important
+	transition-delay: 0.6s !important
+	
+.head_contact-info_active
+	width: 100% !important
+					
+.location
+	padding-top: 159px
+	position: relative
+	h3
+		color: #273441
+		font-family: "Gotham Pro"
+		font-size: 66px
+		font-weight: 700
+		line-height: 79px
+		position: relative
+	.redline
+		position: absolute
+		top: 219px
+		left: -70px
+		width: 0px
+		height: 4px
+		background-color: #d51317
+		transition: 1s
+	.redline_active
+		width: 77px !important
+	p
+		color: #333333
+		font-size: 20px
+		font-weight: 300
+		line-height: 39px
+		font-family: "Roboto Light"
+		font-weight: 300
+		width: 671px
+		span
+			font-family: "Roboto Bold"
+			font-weight: 700
+			
+.nature
+	padding-top: 106px
+	position: relative
+	h3
+		margin-bottom: 89px
+		font-family: "Gotham Pro"
+		font-size: 38px
+		font-weight: 300
+		line-height: 79px
+		position: relative
+	&_gallery
+		position: relative
+		height: 224px
+		width: 60vw
+		.swiper-container
+			width: 100%
+			height: 224px
+			.swiper-slide
+				display: inline-block
+				width: 321px
+				height: 224px
+				a
+					img
+						width: 271px
+						height: 174px
+	.swiper-button-prev
+		position: absolute
+		top: 50%
+		left: 50%
+		background-image: url(../img/icons/prev.png)
+	.swiper-button-next
+		position: absolute
+		top: 50%
+		left: 55%
+		background-image: url(../img/icons/next.png)
+		
+	&_trees
+		display: inline-block
+		position: absolute
+		right: 20%
+		bottom: 0%
+		z-index: -1
+		&:before
+			content: ''
+			position: absolute
+			top: -267px
+			left: -82px
+			width: 164px
+			height: 267px
+			background: url(../img/tree-sm.png) no-repeat
+		&:after
+			content: ''
+			position: absolute
+			top: -448px
+			left: 100px
+			width: 328px
+			height: 548px
+			background: url(../img/tree-bg.png) no-repeat
+			
+.infra
+	padding-top: 137px
+	position: relative
+	margin: 0 auto
+	&:before
+		content: ''
+		position: absolute
+		top: 355px
+		left: -500px
+		background: url(../img/infra-bg-1.png)
+		width: 1079px
+		height: 968px
+		z-index: -1
+	&_wrapper
+		display: inline-block
+		width: 670px
+		margin-right: 101px
+	h3
+		color: #273441
+		font-family: "Gotham Pro"
+		font-size: 66px
+		font-weight: 700
+		line-height: 79px
+		margin-bottom: 45px 
+	p
+		color: #333333
+		font-family: 'Roboto Light'
+		font-size: 20px
+		font-weight: 300
+		line-height: 39px
+		margin-bottom: 30px
+	p:last-child
+		margin: 0
+	
+	.minutes-wrapper
+		display: inline-block
+		width: 288px
+		height: 312px
+	.minutes
+		position: relative
+		height: 100%
+		width: 100%
+		padding: 51px 48px 68px 58px
+		svg
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 0
+			rect
+				width: 100%
+				height: 100%
+				stroke: transparent
+				stroke-width: 5px
+				fill: transparent
+				stroke-dasharray: 0px 288px 0px 312px 0px 288px 312px 0px
+		p
+			color: #333
+			font-family: 'Roboto Light'
+			font-size: 20px
+			font-weight: 300
+			line-height: 39px
+			position: absolute
+			bottom: 35px
+			z-index: 2
+
+		.head
+			color: #333333
+			font-family: 'Roboto Light'
+			font-size: 51px
+			font-weight: 300
+			line-height: 39px
+			position: absolute
+			z-index: 2
+			top: 51px
+			left: 50%
+			transform: translate3d(-50%, 0, 0)
+			bottom: unset
+			span
+				font-size: 104px
+				
+	&_text
+		margin-top: 110px
+		padding-bottom: 105px
+		p
+			display: inline-block
+			cursor: pointer
+		.first
+			color: #333333
+			font-family: 'Roboto Bold'
+			font-size: 18px
+			font-weight: 700
+			line-height: 39px
+			text-transform: uppercase
+			letter-spacing: 1.44px
+			margin-right: 64px
+		.second
+			color: #333333
+			font-family: 'Roboto Light'
+			font-size: 18px
+			font-weight: 300
+			line-height: 39px
+			text-decoration: underline
+			text-transform: uppercase
+			letter-spacing: 1.44px
+			
+.infra_img
+	background: url(../img/infra-img.png) no-repeat
+	width: 1248px
+	height: 786px
+	
+.minutes_p_active
+	color: #FFF !important
+	transition: 1s
+	transition-delay: 3s
+
+	
+.minutes_border_active
+	stroke: #d51317 !important
+	animation: minutes_border_anim 5s linear
+	animation-fill-mode: forwards
+	
+.advantages
+	padding-top: 178px
+	padding-left: 96px
+	display: flex
+	.advantage
+		flex: 1 1 100px
+		height: 870px
+		position: relative
+		z-index: 5
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0px
+			width: 100%
+			height: 50px
+			background: #b8b8b8
+			transition: 1s
+			z-index: -1
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 50px
+			background: #b8b8b8
+			transition: 1s
+			z-index: -1
+		&:hover 
+			&:before
+				top: -50px
+			&:after
+				bottom: -50px
+		.wrapper-text
+			padding: 0 60px
+		p
+			color: #ffffff
+			font-family: 'Roboto Light'
+			font-size: 19px
+			font-weight: 300
+			line-height: 33.39px
+		.head
+			color: #ffffff
+			font-family: "Gotham Pro"
+			font-size: 40px
+			font-weight: 700
+			line-height: 75.38px
+			margin-bottom: 30px
+	.security
+		background-color: #b8b8b8
+		position: relative
+		.img
+			height: 322px
+			width: 100%
+			position: relative
+			z-index: 10
+			img
+				display: block
+				margin: 0 auto
+			&:after
+				content: ''
+				position: absolute
+				left: 42%
+				top: 39%
+				width: 63px
+				height: 39px
+				background: url(../img/advantages/security-forward.png) no-repeat
+				z-index: 100
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 469px
+				background: url(../img/advantages/security-hover.png) no-repeat
+				background-position: center
+				background-size: cover
+				z-index: -1
+				opacity: 0
+				transition: 0.5s
+				transition-delay: 0s
+				transform: translateY(-50px)
+		&:hover
+			.img:before
+				opacity: 1
+				transition: 0.5s
+				transition-delay: 0s
+	.accomplishment
+		background-color: #d51317
+		position: relative
+		&:before, &:after
+			background-color: #d51317
+		.img
+			height: 322px
+			width: 100%
+			img
+				display: block
+				z-index: 10
+				margin: 0 auto
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 469px
+				background: url(../img/advantages/acc-hover.png) no-repeat
+				background-position: 50% 0
+				z-index: 0
+				opacity: 0
+				transition: 0.5s
+				transition-delay: 0s
+		&:hover
+			.img:before
+				opacity: 1
+				transition: 0.5s
+				transition-delay: 0s
+		.wrapper-text
+			z-index: 999999
+	.reliability
+		background-color: #323232
+		&:before, &:after
+			background-color: #323232
+		.img
+			height: 322px
+			width: 100%
+			position: relative
+			z-index: 10
+			img
+				display: block
+				top: 34px
+				left: calc(50% - 106px)
+				position: absolute
+			.logo-adv
+				width: 96px
+				height: 96px
+				top: 110px
+				left: 258px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 469px
+				background: url(../img/advantages/rel-hover.png) no-repeat
+				background-position: 50% 0
+				z-index: 0
+				opacity: 0
+				transition: 0.5s
+				transition-delay: 0s
+		&:hover
+			.img:before
+				opacity: 1
+				transition: 0.5s
+				transition-delay: 0s
+				
+.description
+	padding-top: 184px
+	width: 100%
+	display: flex
+	align-items: center
+	.wrapper-icons
+		display: flex
+		flex-wrap: wrap
+		width: 550px
+		.icons
+			width: 235px
+			height: 235px
+			margin: 10px
+			display: flex
+			padding: 0 50px
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			background-color: #dddddd
+			cursor: pointer
+			img
+				width: 61px
+				height: 61px
+			p
+				text-align: center
+				margin-top: 20px
+				height: 60px
+				color: #333333
+				font-family: 'Roboto Bold'
+				font-size: 16px
+				font-weight: 700
+				line-height: 27px
+				
+	.wrapper-text
+		width: 45%
+		position: relative
+		height: 680px
+		.text-1
+			transform: translate3d(200px, 0, 0)
+			opacity: 0
+			position: absolute
+			transition: 1s
+			p
+				color: #333333
+				font-family: Roboto
+				font-size: 20px
+				font-weight: 300
+				line-height: 39px
+				font-family: "Roboto Light"
+				font-weight: 300
+			.head
+				color: #273441
+				font-family: "Gotham Pro"
+				font-size: 66px
+				font-weight: 700
+				line-height: 79px
+				margin-bottom: 57px
+				
+.icons_active
+	background-color: transparent !important
+	border: 4px solid #d51317
+	
+.text-1_active
+	transform: translate3d(0, 0, 0) !important
+	opacity: 1 !important
+
+.arch-wrapper
+	position: relative		
+.arch
+	padding-top: 177px
+	position: relative
+	.swiper-container-arch
+		position: relative
+		width: 100%
+		img
+			width: 100%
+		.nav-buttons
+			position: absolute
+			background: #FFF
+			height: 134px
+			width: 293px
+			top: 0px
+			left: calc(50% - 144px)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			z-index: 100
+		.swiper-button-prev-arch
+			width: 60px
+			height: 60px
+			background: url(../img/icons/007-arrows-2.png) no-repeat
+			background-size: 100%
+		.swiper-button-next-arch
+	    width: 60px
+	    height: 60px
+	    background: url(../img/icons/008-arrows-1.png) no-repeat
+	    background-size: 100%
+		.swiper-pagination
+			position: static
+			.swiper-pagination-bullet
+				background-color: #797979
+				margin: 0 6px
+			.swiper-pagination-bullet-active
+				background-color: #d51317
+	&_text
+		position: absolute
+		width: 1057px
+		bottom: -235px
+		left: calc(50% - 528px)
+		z-index: 100
+		background: #FFF
+		padding: 88px 100px
+		p
+			color: #333333
+			font-family: 'Roboto Light'
+			font-size: 20px
+			font-weight: 300
+			line-height: 39px
+		.head
+			color: #273441
+			font-family: "Gotham Pro"
+			font-size: 66px
+			font-weight: 700
+			line-height: 79px
+			
+.consult
+	padding-top: 405px
+	padding-bottom: 181px 
+	width: 100%
+	position: relative
+	&_text
+		width: 477px
+		margin-right: 100px 
+		p
+			color: #333333
+			font-family: 'Roboto Light'
+			font-size: 20px
+			font-weight: 300
+			line-height: 39px
+			margin-bottom: 62px 
+		.head
+			color: #333333
+			font-family: "Gotham Pro"
+			font-size: 42px
+			font-weight: 700
+			line-height: 52px
+			margin-bottom: 46px
+		button
+			width: 334px
+			height: 70px
+			border-radius: 35px
+			background-color: #d51317
+			text-align: center
+			color: #ffffff
+			font-family: "Gotham Pro"
+			font-size: 22px
+			font-weight: 700
+			border: none
+			margin-bottom: 70px
+		a
+			display: block
+			color: #333333
+			font-family: "Gotham Pro"
+			font-size: 28px
+			font-weight: 700
+			line-height: 79px
+			&:hover
+	 			text-decoration: none
+	.map
+		width: 50vw
+		position: absolute
+		left: 59%
+		top: 405px
+		height: 541px
+		
+		
+.gray-line
+	width: 100vw
+	height: 1px
+	background-color: #b6b6b6
+	
+.consult_img-mob
+	display: none
+	
+footer
+	padding: 55px 0 0 0
+	.wrapper-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 81px 
+		.partner
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 129px
+			width: 256px
+			margin: 0 50px
+			p
+				height: 43px
+				color: #333333
+				font-family: "Gotham Pro"
+				font-size: 18px
+				font-weight: 300
+				line-height: 27px
+	.socials
+		text-align: center
+		padding-bottom: 48px
+		.head
+			color: #333333
+			font-family: "Gotham Pro"
+			font-size: 18px
+			font-weight: 300
+			line-height: 52px
+		img
+			margin: 0 3.5px
+		a
+			width: 292px
+			height: 17px
+			color: #5081b8
+			font-family: "Gotham Pro"
+			font-size: 18px
+			font-weight: 300
+			line-height: 52px
+			text-decoration: underline
+			
+.mfp-close
+	transform: scale(3)
+			
+.container-wide
+	margin: 0 auto
+	width: 1271px
+
+@keyframes head_scroll-down_arrow_anim
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 50px, 0)
+  100%
+    transform: translate3d(0, 0, 0)		
+    
+
+@keyframes center-side_background_before
+	0%
+		transform: scale(1.1)
+		opacity: 1
+	50%
+		transform: scale(1.2)
+	51%
+		transform: scale(1)
+	100%
+		transform: scale(1.1)
+		
+@keyframes center-side_background_after
+	0%
+		transform: scale(1)
+		opacity: 0
+	40%
+		transform: scale(1)
+		opacity: 0
+	50%
+		opacity: 1
+	90%
+		opacity: 1
+	100%
+		transform: scale(1.2)
+		opacity: 0
+		
+@keyframes minutes_border_anim
+	0%
+		fill: transparent
+		stroke-dasharray: 0px 288px 0px 312px 0px 288px 312px 0px
+	20%
+		stroke-dasharray: 288px 0px 0px 312px 0px 288px 312px 0px
+	40%
+		stroke-dasharray: 288px 0px 312px 0px 0px 288px 312px 0px
+	60%
+		stroke-dasharray: 288px 0px 312px 0px 288px 0px 312px 0px
+		fill: transparent
+	80%
+		fill: #d51317
+		stroke-dasharray: 288px 0px 312px 0px 288px 0px 312px 0px
+	100%
+		fill: #d51317
+		stroke-dasharray: 288px 0px 312px 0px 288px 0px 312px 0px
+		
+@keyframes text-1_active_anim
+	0%
+		transform: translate3d(400px, 0, 0)
+		opacity: 0
+		display: none
+	10%
+		transform: translate3d(400px, 0, 0)
+		opacity: 0
+		display: block
+	100%
+		transform: translate3d(0px, 0, 0)
+		opacity: 1
+		display: block
+		
+@media only screen and (max-width: 1370px)
+	.wrapper
+		max-width: 1370px
+		header
+			height: 768px
+			.left-menu
+				padding-top: 40px
+				.menu
+					width: 54px
+					top: 200px
+					span
+						&:before
+							top: 10px
+						&:after
+							bottom: 10px
+
+					&_text
+						margin: 0
+						font-size: 15px
+						font-weight: 700
+						line-height: 79px
+						text-transform: uppercase
+						letter-spacing: 4.8px
+				&_active
+					width: 54px
+					.logo
+						img
+							width: 35px !important
+				.logo
+				 	margin-bottom: 25px
+				 	img
+				 		width: 125px
+				.nav
+					top: 185px
+					ul
+			 	 		li
+			 	 			font-size: 18px
+			 	 			padding: 15px 0 
+			 	 		.has_sub:before
+			 	 			top: 31px
+			 	 		.has_sub
+			 	 			.submenu
+			 	 				padding: 10px 0
+			 	 				li
+			 	 					font-size: 	16px
+			 	 					padding: 5px 0
+					
+			.center-side 
+				height: 768px
+				.head_container
+					width: 1024px
+					margin: 0 auto
+				.head_contact-info
+					height: 768px
+					&_wrapper
+						height: 100%
+						padding: 20px 0 0 108px
+						h3
+						    font-size: 56px
+						    font-weight: 700
+						    line-height: 79px
+						    margin-bottom: 25px
+						.wrapper-flex
+							ul
+								font-size: 16px
+								padding: 0 28px
+								margin: 0
+								li
+									height: 30px
+					.cross
+						right: 20px
+					.map
+						margin-top: 20px
+						height: 300px
+						width: 800px
+				.head_container
+					a
+						font-size: 18px
+						margin-bottom: 100px
+						.bold
+						 font-size: 26px 
+					.first-head
+						font-size: 56px
+						margin-bottom: 37px
+					.second-head
+						font-size: 26px
+						margin-bottom: 40px 
+			.right-side__bottom
+				width: 54px
+				.head_scroll-down
+					width: 54px
+					font-size: 15px
+					font-weight: 700
+			.right-side
+				width: 54px
+				.head_contacts
+					width: 54px
+					p
+						font-size: 15px
+						font-weight: 700
+						line-height: 79px
+						text-transform: uppercase
+						letter-spacing: 4.8px
+				.head_scroll-down
+					height: 60%
+					width: 54px
+				.head_scroll-down_arrow
+					bottom: 100px
+					
+	.container
+		padding-left: 108px
+	.center-side .head_container
+		padding-left: 108px
+		padding-top: 55px
+	
+	.redline
+		display: none
+	
+	.location
+		padding-top: 103px 
+		h3
+			font-size: 48px
+	
+	.nature
+		padding-top: 87px
+		.swiper-container
+			left: 0px
+		h3
+			font-size: 32px
+		.nature_gallery
+			img
+				width: 320px
+				height: 224px
+		&_trees
+			margin-left: 200px
+		.swiper-button-next
+			right: 10%
+		
+	.infra
+		padding-top: 111px
+		&_wrapper
+			width: 587px
+			margin-right: 94px 
+		h3
+			font-size: 48px
+			margin-bottom: 40px
+		&_text
+			margin-top: 82px
+			padding-bottom: 54px
+		&_img
+		 	margin-left: 54px
+		 	width: 100%
+		 	height: 612px
+		 	background: url(../img/infra-img-1024.png) no-repeat
+		 	background-size: cover
+		.minutes-wrapper
+			width: 216px
+			height: 234px
+			vertical-align: bottom
+		.minutes
+			vertical-align: bottom
+			font-size: 18px
+			padding: 48px 21px 38px 23px
+			p
+				bottom: 38px
+				font-size: 18px
+				line-height: 30px
+			.head
+				font-size: 22px
+				width: 85px
+				height: 43px
+				margin: 0 auto 28px
+				top: 48px
+				span
+					font-size: 59px
+			&_p
+				width: 172px
+				height: 77px
+				color: #333333
+				font-size: 18px
+				font-weight: 300
+				line-height: 30px
+	 		
+	.advantages
+		padding-top: 130px
+		padding-left: 54px 
+		.advantage
+			height: 716px
+			.img
+				height: 181px
+			.head
+				font-size: 26px
+			p
+			 	font-size: 16px
+			 	line-height: 22px
+			.wrapper-text
+				padding: 0 29px
+		.security
+		 	img
+		 		width: 197px
+		.accomplishment
+			img
+				width: 177px
+		.reliability
+			.img
+				img
+					width: 112px
+					left: calc(50% - 58px)
+				
+	.description
+		padding-top: 113px
+		display: block
+		padding-left: 108px 
+		.wrapper-icons
+			width: 100%
+			.icons
+				width: 135px
+				height: 145px
+				padding: 0 10px
+				margin: 0 5px
+				&:first-child
+					margin-left: 0px
+				&:last-child
+					margin-right: 0px
+				p
+					font-size: 13px
+					line-height: 17px
+					margin-top: 5px
+					margin-bottom: 0px  
+				img
+				 	width: 61px
+		.wrapper-text
+			width: 100%
+			display: block
+			.text-1
+				width: 70%
+				.head
+					font-size: 48px
+				p
+				 	font-size: 20px
+			 	
+	.arch
+		padding-top: 35px
+		&_text
+			padding: 51px 15px 99px 108px
+			display: block
+			position: static
+			width: 1024px
+			margin: 0 auto
+			.head
+				font-size: 48px
+			p
+			 	font-size: 20px
+
+	.consult
+	 	padding-top: 0px
+	 	padding-bottom: 76px
+	 	padding-left: 108px 
+	 	display: block
+	 	&_text
+	 		width: 70%
+	 	.map
+	 		margin-top: 103px 
+	 		width: 80%
+	 		height: 541px
+	 		position: static
+ 		
+	footer
+		padding: 39px 0 39px 98px
+		.wrapper-flex
+			margin-bottom: 64px
+			.partner
+				width: 188px 
+				margin: 0 50px 0 0
+				&:last-child
+					margin: 0
+				p
+					font-size: 13px 
+				img
+					width: 176px
+					height: 44px
+		.socials
+			.head
+				font-size: 13px
+				
+	@keyframes minutes_border_anim
+		0%
+			fill: transparent
+			stroke-dasharray: 0px 216px 0px 234px 0px 216px 234px 0px
+		20%
+			stroke-dasharray: 216px 0px 0px 234px 0px 216px 234px 0px
+		40%
+			stroke-dasharray: 216px 0px 234px 0px 0px 216px 234px 0px
+		60%
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+			fill: transparent
+		80%
+			fill: #d51317
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+		100%
+			fill: #d51317
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+			
+	.container
+		width: 1024px
+		margin: 0 auto
+	.container-wide
+		width: 1024px
+		margin: 0 auto
+
+			
+
+@media only screen and (max-width: 1024px)
+	.wrapper
+		max-width: 1024px
+		header
+			height: 1105px
+			.left-menu
+				position: fixed
+				top: 0
+				left: 0
+				height: 79px
+				width: 100%
+				padding: 0
+				z-index: 9000
+				overflow: hidden
+				.logo
+					display: inline-block
+					float: left
+					margin: 10px 30px
+					img
+						width: 54px !important
+				.menu
+					display: inline-block
+					float: right
+					transform: rotate(0deg)
+					position: static
+					width: 200px
+					font-size: 15px 
+					line-height: 79px
+				.nav
+					background: #FFF
+					width: 100%
+					position: static
+					display: block
+				.menu_active
+					.burger
+						span
+							opacity: 0
+						&:before
+							transform: rotate(45deg)
+							top: 0
+						&:after
+							transform: rotate(-45deg)
+							bottom: 0											
+			.center-side
+				height: 1105px
+				.head_container
+					padding: 100px 67px
+			.right-side
+				display: none
+			.right-side__bottom
+				display: none
+				
+	.location
+		padding-top: 82px
+		padding-right: 77px
+		p
+			width: 100%
+	
+	.container
+		padding-left: 77px
+	
+	.nature
+	 	padding-top: 40px
+	 	&_trees
+	 		display: none
+	 	h3
+	 	 	margin-bottom: 59px
+	 	&_gallery
+	 	 	width: 73vw !important
+	 	 	.swiper-slide
+	 	 		text-align: right
+		 	 	img
+		 	 		display: inline-block
+	 	.swiper-button-next
+	 		left: 80%
+	 	.swiper-button-prev
+	 		left: 65%
+	 	 	
+
+ 		
+	.infra
+		padding-top: 64px
+		padding-right: 77px 
+		&:before
+			content: ''
+			display: table-cell
+			background: none
+		&_wrapper
+			width: 100%
+		&_text
+			margin-top: 63px
+			padding-bottom: 62px
+			p
+				display: block
+				width: 100%
+				margin-bottom: 10px
+		&_img
+		 	margin-left: 0px
+		.minutes-wrapper
+			margin-top: 40px
+	 	
+	.advantages
+	 	padding: 117px 0 105px
+	 	flex-direction: column
+	 	.advantage
+			height: auto
+			.wrapper-text
+				padding: 0 60px 110px !important
+			.security
+				&:before, &:after
+					display: none
+				.img
+					&:before
+						display: none
+			.accomplishment
+				&:before, &:after
+					display: none
+				.img
+					&:before
+						display: none
+			.reliability
+				&:before, &:after
+					display: none
+				.img
+					&:before
+						display: none
+					
+	.description
+		padding-top: 0px
+		padding-left: 67px 
+		.icons
+			margin: 10px 10px 10px 0px !important
+			
+		.wrapper-text
+		 	height: 1030px
+	 	
+	.arch
+		.swiper-container-arch
+			img
+				// height: 323px
+			.nav-buttons
+				top: -60px
+		&_text
+			padding: 65px 15px 66px 67px
+			width: 640px
+			margin: 0 auto
+		
+	.consult
+		padding-left: 67px 
+		position: relative
+		&_text
+			a
+				display: none
+		&_img
+			display: none
+		.map
+			display: none
+			
+			
+			
+	.consult_img-mob
+		display: block
+		width: 100%
+		height: 437px
+		margin-bottom: 113px 
+		
+	footer
+		padding: 41px
+		.wrapper-flex
+			justify-content: center
+			flex-wrap: wrap
+			align-times: center
+			.partner
+				margin: 0
+				
+	@keyframes minutes_border_anim
+		0%
+			fill: transparent
+			stroke-dasharray: 0px 216px 0px 234px 0px 216px 234px 0px
+		20%
+			stroke-dasharray: 216px 0px 0px 234px 0px 216px 234px 0px
+		40%
+			stroke-dasharray: 216px 0px 234px 0px 0px 216px 234px 0px
+		60%
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+			fill: transparent
+		80%
+			fill: #d51317
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+		100%
+			fill: #d51317
+			stroke-dasharray: 216px 0px 234px 0px 216px 0px 234px 0px
+			
+	.container
+		width: 640px
+		margin: 0 auto
+		padding-left: 67px 
+	.container-wide
+		width: 640px
+		margin: 0 auto
+	.wrapper
+		header
+			.center-side
+				.head_container
+					width: 640px
+				
+@media only screen and (max-width: 640px)
+	.wrapper
+		max-width: 640px
+		header
+			height: 770px
+			.left-menu
+				.menu
+					width: 70px
+				.menu_text
+					display: none
+			.center-side
+				height: 770px 
+				.head_container
+					padding: 114px 34px 0
+					a
+						font-size: 13px
+						margin-bottom: 42px 
+						img
+							transform: translate3d(0, 10px, 0)
+						.bold
+						 font-size: 20px 
+						 display: inline-block
+						 transform: translate3d(46px, -57px, 0)
+					.first-head
+						font-size: 26px
+						font-weight: 400
+						line-height: 35px
+					.second-head
+						font-size: 20px
+						line-height: 35px
+					button
+						width: 214px
+						height: 60px
+						border-radius: 30px
+						font-size: 16px
+						font-weight: 700
+						line-height: 25px
+	.container
+		padding: 0 32px 0
+		
+	.location
+		h3
+			font-size: 26px
+		p
+			font-size: 15px
+			line-height: 24px  
+			
+	.nature
+		padding-top: 20px
+		h3
+			font-size: 20px
+			margin-top: 0px
+			line-height: 25px
+			margin-bottom: 80px 
+		&_gallery
+		  width: 300px !important
+		  height: 113px !important
+		  .swiper-slide
+		  	height: 113px !important
+		  
+		  img
+		  	width: 100% !important
+		  	height: 113px !important
+		.swiper-button-prev
+			top: 200%
+			left: 0%
+		.swiper-button-next
+			top: 200%
+			left: 15%
+		  	
+	.infra
+		h3
+			font-size: 26px
+			margin-bottom: 20px 
+		p
+			font-size: 16px
+			font-weight: 300
+			line-height: 24px
+		.minutes_wrapper
+			width: auto
+			height: auto
+		&_text
+			.first
+				font-size: 16px
+				font-weight: 700
+				line-height: 25px
+				text-transform: uppercase
+				letter-spacing: 1.28px
+			.second
+				font-size: 16px
+				font-weight: 300
+				line-height: 39px
+				text-decoration: underline
+				text-transform: uppercase
+				letter-spacing: 1.28px
+		&_img
+			width: 100%
+			height: 203px
+				
+	.advantages
+		padding: 71px 0
+		.advantage
+			.wrapper-text
+				padding: 0 32px 61px !important
+				.head
+					font-size: 26px
+					font-weight: 700
+					line-height: 20.02px
+				p
+					font-size: 16px
+					font-weight: 300
+					line-height: 24px
+					
+	.description
+		padding: 0 27px 0
+		.wrapper-icons
+			.icons
+				width: 125px
+				height: 134px
+				margin: 8px 8px 8px 0 !important
+				img
+					width: 46px
+					height: 50px 
+		.wrapper-text
+			padding: 20px 0 0 0
+			height: 675px
+			.text-1
+				width: 100%
+				.head
+					font-size: 26px
+					font-weight: 700
+					line-height: 35px
+					margin-bottom: 20px
+				p
+					font-size: 16px
+					font-weight: 300
+					line-height: 24px
+					
+	.arch
+		.swiper-container-arch
+			.nav-buttons
+				top: -95px
+			img
+				// height: 177px
+		&_text
+			padding: 40px 34px
+			width: 320px
+			margin: 0 auto
+			.head
+				font-size: 26px
+			p
+			 	font-size: 16px
+			 	line-height: 24px
+			 	
+	.consult
+		padding-left: 32px 
+		&_text
+			width: 100%
+			.head
+				font-size: 26px
+				line-height: 35px
+			p
+				font-size: 16px
+				font-weight: 300
+				line-height: 24px
+			button
+				width: 246px
+				height: 60px
+				border-radius: 30px
+				background-color: #d51317
+				font-size: 16px
+				font-weight: 700
+				line-height: 25px
+	.consult_img-mob
+		margin-bottom: 60px
+		height: 261px
+		
+	footer
+		.wrapper-flex
+			margin-bottom: 40px 
+			.partner
+				width: 118px
+				p
+					font-size: 12px
+					font-weight: 300
+					line-height: 16px
+				img
+					width: 102px
+					height: 26px
+		.socials
+			.head
+				font-size: 14px
+				font-weight: 300
+				line-height: 16px
+			.wrapper-flex
+				img
+					width: 32px
+					height: 32px
+					margin: 0 1px
+			a
+				font-size: 12px
+				font-weight: 300
+				line-height: 16px
+	.container
+		width: 320px
+		margin: 0 auto
+		padding-left: 32px 
+	.container-wide
+		width: 320px
+		margin: 0 auto
+	.wrapper
+		header
+			.center-side
+				.head_container
+					width: 320px
+
+		
+		

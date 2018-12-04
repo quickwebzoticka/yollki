@@ -1,0 +1,31 @@
+body {
+	overflow: hidden;
+}
+
+.dws-progress-bar {
+ position: absolute;
+ top: 50%;
+ left: 0;
+ transform: translate(0, -50%);
+ z-index: 9999;
+ width: 0%;
+ height: 10px;
+ background: #FFF;
+ opacity: 1;
+-webkit-transition:  .5s;
+-moz-transition:  .5s;
+-ms-transition:  .5s;
+-o-transition:  .5s;
+transition:  .5s;
+}
+
+#preloader {
+ position: fixed;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 9999;
+ width: 100%;
+ background: red;
+}
+

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Yollki</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/queryLoader.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/go_top.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js/preloader.js"></script>
+</head>
+<body>
+	<div id="preloader">
+	    <div class="dws-progress-bar">
+	    	
+	    </div>
+	</div>
+	<div class="wrapper">
+		<header>
+			<div class="left-menu">
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="menu">
+					<span class="burger"><span></span></span><p class="menu_text">Меню</p>
+				</div>
+				<div class="nav">
+					<ul>
+						<li class="has_sub">
+							о проекте
+							<ul class="submenu">
+								<li>О проекте</li>
+								<li>Наша команда</li>
+								<li>Коммерческие помещения</li>
+								<li>Расположение</li>
+								<li>Инфрастуктура</li>
+								<li>Новости</li>
+								<li>Документация</li>
+								<li>Партнеры</li>
+								<li>Видео</li>
+								<li>Пресса о нас</li>
+							</ul>
+						</li>
+						<li>ход строительства</li>
+						<div class="line"></div>
+						<li class="has_sub">
+							выбрать квартиру
+							<ul class="submenu">
+								<li>О проекте</li>
+								<li>Наша команда</li>
+								<li>Коммерческие помещения</li>
+								<li>Расположение</li>
+							</ul>
+						</li>
+						<div class="line"></div>
+						<li>акции</li>
+						<div class="line"></div>
+						<li class="li_contacts">контакты</li>
+					</ul>
+				</div>
+			</div>
+			<div class="center-side smooth-slide">
+				<div class="head_container">
+					<a href="#"><img src="img/icons/010-smartphone-call.png" alt="phone" class="phone"> Отдел продаж: <span class="bold">+7(812) 501-18-59</span></a>
+					<p class="first-head"><span>«Yolkki Village»</span> - квартиры<br> в Ленинградской области</p>
+					<p class="second-head">До конца апреля скидка на 50 квартир до 24%</p>
+					<button>Выбрать квартиру</button>
+				</div>
+				<div class="right-side">
+					<div class="head_contacts"><p>Контакты</p></div>
+					<!-- <div class="head_scroll-down"><p>листате вниз</p><div class="head_scroll-down_arrow"></div></div> -->
+				</div>
+				<div class="right-side__bottom">
+					<div class="head_scroll-down"><p>листате вниз</p><div class="head_scroll-down_arrow"></div></div>
+				</div>
+				<div class="head_contact-info">
+					<div class="head_contact-info_wrapper container">
+						<div class="cross"><span></span></div>
+						<h3>Контакты</h3>
+						<div class="wrapper-flex">
+							<ul>
+								<li>Отдел продаж ЖК «Yolkki Village»</li>
+								<li>197101, Санкт-Петербург,</li>
+								<li>улица Чапаева, дом 15, БЦ "Сенатор",</li>
+								<li>Ближайшая станция метро «Горьковская» - 10 минут пешком.</li>
+							</ul>
+							<ul>
+								<li>Телефон</li>
+								<li>+7 (812) 501-18-59</li>
+							</ul>
+							<ul>
+								<li>Почта</li>
+								<li>sale@yolkki.ru</li>
+							</ul>
+						</div>
+						<div class="map">
+							<div id="YMapsID" style="width: 100%; height: 100%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	<div class="wrapper-back-white">
+		<div class="location container smooth-slide">
+			<div class="redline"></div>
+			<h3>Местоположение</h3>
+			<p><span>«Yolkki Village»</span> возводится на территории Всеволожского р-на  в д. Скотное в отдалении от промышленных предприятий. Новоселов ждет<br> размеренная жизнь в окружении зелени, без шума и городской суеты.<br> Из окон квартир открываются красочные пейзажи. А многообразие<br> озер, горнолыжных курортов и мест для семейного отдыха удивит даже<br> самого взыскательного покупателя.
+			</p>
+		</div>
+	<div class="nature_wrapper_smooth smooth-slide">
+		<div class="nature">
+			<div class="container">
+				<h3>
+					Уникальная природа
+					<span class="swiper-button-prev"></span>
+				    <span class="swiper-button-next"></span>
+				</h3>
+			</div>
+			<div class="nature_trees"></div>
+		</div>
+			<div class="nature_gallery">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+				        	<a href="img/gallery/1.jpg" class="img-popup"><img src="img/gallery/1.jpg" alt="1"></a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="img/gallery/2.jpg" class="img-popup"><img src="img/gallery/2.jpg" alt="2"></a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="img/gallery/3.jpg" class="img-popup"><img src="img/gallery/3.jpg" alt="3"></a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="img/gallery/4.jpg" class="img-popup"><img src="img/gallery/4.jpg" alt="4"></a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="img/gallery/5.jpg" class="img-popup"><img src="img/gallery/5.jpg" alt="5"></a>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	<div class="infra_smooth_wrapper">
+		<div class="infra container">
+			<div class="infra_wrapper smooth-slide">
+				<h3>Инфраструктура</h3>
+				<p>Квартал подразумевает собственное социальное и торговое благоустройство. Запланировано строительство детского сада и школы. Также недалеко от комплекса находятся уже полностью обжитые микрорайоны с развитой торгово-развлекательной и социальной инфраструктурой.</p>
+				<p>Всего в 7-ми минутах езды от Yolkki Village находятся крупнейшие торговые центры района: МЕГА, ИКЕА, Ашан. 
+				На первых этажах комплекса расположатся коммерческие помещения, в которых будут открыты отделение банка, аптека, продуктовый магазин, салон красоты, кафе и др.</p>
+			</div>
+			<div class="minutes-wrapper">	
+				<div class="minutes">
+					<svg>
+						<rect class="minutes_border"/>
+					</svg>
+					<p class="minutes_p head">
+						<span>7</span> мин.
+					</p>
+					<p class="minutes_p">
+						езды&nbsp;до&nbsp;крупнейших 
+						торговых центров
+						района
+					</p>
+				</div>
+			</div>
+			<div class="infra_text smooth-slide">
+				<p class="first">Инфраструктура жилого комплекса</p>
+				<p class="second">Инфраструктура района</p>
+			</div>
+		</div>
+		<div class="infra_img container">
+
+		</div>
+	</div>
+		<div class="advantages">
+			<div class="advantage security smooth-slide">
+				<div class="img">
+					<img src="img/advantages/security.png" alt="security">
+				</div>
+				<div class="wrapper-text">
+					<p class="head">Безопасность</p>
+					<p>Для комфорта и безопасности будущих жильцов мы предусмотрели систему домофонной связи и видеонаблюдения, в жилых помещениях установят противопожарную сигнализацию. 
+					Территория будет полностью закрыта от посторонних, подъезд к жилому комплексу ограничат шлагбаумом. 
+					</p>
+				</div>
+			</div>
+			<div class="advantage accomplishment">
+				<div class="img">
+					<img src="img/advantages/acc.png" alt="acc">
+				</div>
+				<div class="wrapper-text">
+					<p class="head">Благоустройство</p>
+					<p>Внутридомовая территория Yolkki Village – это продуманное и комфортное пространство для каждого жителя.  Детские площадки, рассчитанные как на малышей, так и на детей постарше, будут оборудованы набивным покрытием, защищающим от травм. Для людей, предпочитающих активный образ жизни, оборудуют спортивные площадки. 
+					Ландшафтным проектом запланировано масштабное озеленение.
+					</p>
+				</div>
+			</div>
+			<div class="advantage reliability">
+				<div class="img">
+					<img src="img/advantages/Shield.png" alt="rel" class="shield">
+				</div>
+				<div class="wrapper-text">
+					<p class="head">Надежность</p>
+					<p>Надежность строительства обеспечивают ключевые финансовые партнеры Yolkki Village  - АО «Россельхозбанк» и ПАО «Энергомашбанк». Ипотечными партнерами, сотрудничающими только с проверенными компаниями, выступают крупнейшие участники российского рынка банковских услуг – ПАО Сбербанк, ВТБ24 (ПАО), АО Банк «СНГБ», АО «КБ ДельтаКредит» и др.
+					Проект реализуется в рамках Федерального закона 214. Все договоры долевого участия проходят обязательную государственную регистрацию в Управлении Росреестра по Санкт-Петербургу.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="description container-wide">
+			<div class="wrapper-icons smooth-slide">
+				<div class="icons icons_active">
+					<img src="img/icons/006-family-room.png" alt="family">
+					<p>ШКОЛА И ДЕТСКИЙ САД</p>
+				</div>
+				<div class="icons">
+					<img src="img/icons/005-fountain.png" alt="fountain">
+					<p>В ОКРУЖЕНИИ ПАРКОВ И ОЗЕР</p>
+				</div>
+				<div class="icons">
+					<img src="img/icons/004-baby-buggy.png" alt="babby">
+					<p>ДВОРЫ БЕЗ МАШИН</p>
+				</div>
+				<div class="icons">
+					<img src="img/icons/003-gym.png" alt="gym">
+					<p>СОВРЕМЕННЫЕ ПЛОЩАДКИ WORKOUT</p>
+				</div>
+				<div class="icons">
+					<img src="img/icons/002-gym-1.png" alt="sport">
+					<p>СПОРТ</p>
+				</div>
+				<div class="icons">
+					<img src="img/icons/001-salad.png" alt="salad">
+					<p>ФЕРМЕРСКИЕ ПРОДУКТЫ</p>
+				</div>
+			</div>
+			<div class="wrapper-text">
+				<div class="text-1 text-1_active">
+					<p class="head">
+						Школа 
+						и детский сад
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+				<div class="text-1">
+					<p class="head">
+						В окружении парков и озер
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+				<div class="text-1">
+					<p class="head">
+						Дворы без машин
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+				<div class="text-1">
+					<p class="head">
+						Современные площадки workout
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+				<div class="text-1">
+					<p class="head">
+						Спорт
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+				<div class="text-1">
+					<p class="head">
+						Фермерские продукты
+					</p>
+					<p>
+						Всего несколько минут понадобится родителям, чтобы отвести ребенка в детский сад или школу, потому что он расположится на территории жилого комплекса. Ваш ребенок будет в безопасности. Наслаждайтесь жизнью, зная, что все самое важное и ценное находится рядом!
+						<br>
+						<br>
+						Специально для удобства маленьких жителей и их родителей предусмотрено строительство муниципального дошкольного образовательного учреждения на 160 учеников, которое будет совмещено с начальной школой на 80 учеников. Рядом будут установлены спортивные и детские площадки.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="arch-wrapper">
+			<div class="arch">
+				<div class="swiper-container-arch">
+				    <div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/arch.png" alt="arch"></div>
+						<div class="swiper-slide"><img src="img/header-1.png" alt="arch"></div>
+						<div class="swiper-slide"><img src="img/header-2.png" alt="arch"></div>
+						<div class="swiper-slide"><img src="img/arch.png" alt="arch"></div>
+						<div class="swiper-slide"><img src="img/arch.png" alt="arch"></div>
+				    </div>
+				    <div class="nav-buttons smooth-slide">
+				    	<div class="swiper-button-prev-arch"></div>
+						<div class="swiper-pagination"></div>
+				    	<div class="swiper-button-next-arch"></div>
+				    </div>
+				</div>
+			</div>
+			<div class="arch_text smooth-slide">
+				<p class="head">
+					Архитектура
+				</p>
+				<p>
+					Скандинавский стиль домов демонстрирует лучшие традиции европейской архитектуры. Строящийся по финским технологиям, красивый не только внутри, но и снаружи, комплекс просто не может не вызывать восхищение у гостей и жителей. Благодаря малой и средней этажности и каскадной архитектуре, он прекрасно гармонирует с холмистым рельефом окружающей местности, мягко его дополняя. Корпуса будут находиться друг напротив друга, образуя закрытое пространство внутри. 
+				</p>
+			</div>
+		</div>
+		
+		<div class="consult_smooth_wrapper">
+			<div class="consult container-wide">
+				<div class="consult_text smooth-slide">
+					<p class="head">Получите консультацию</p>
+					<p>Наш менеджер предоставит вам бесплатную
+					персональную консультацию и поможет подобрать
+					необходимую квартиру</p>
+					<button>Получить консультацию</button>
+					<a href="#">+7 (812) 501-18-59</a>
+				</div>
+				<div class="map">
+					<div id="YMapsID-2" style="width: 100%; height: 100%"></div>
+				</div>
+			</div>
+			<div class="consult_img-mob">
+				<div id="YMapsID-3" style="width: 100%; height: 100%"></div>
+			</div>
+		</div>
+		<div class="gray-line"></div>
+	</div>
+</div>
+
+
+	<footer class="container-wide smooth-slide">
+		<div class="wrapper-flex">
+			<div class="partner">
+				<p>Партнеры по ипотечному кредитованию</p>
+				<img src="img/partners/sber_logo.png" alt="sber">
+			</div>
+			<div class="partner">
+				<p>Ипотечный партнер</p>
+				<img src="img/partners/logo_bspb.png" alt="bspb">
+			</div>
+			<div class="partner">
+				<p>Эксклюзивный партнер</p>
+				<img src="img/partners/icon--sreda.png" alt="pyatnica">
+			</div>
+			<div class="partner">
+				<p>Партнер по соц. программам</p>
+				<img src="img/partners/CJD.png" alt="CJD">
+			</div>
+		</div>
+		<div class="socials">
+			<p class="head">Мы в соц.сетях:</p>
+			<div class="wrapper-flex">
+				<img src="img/socials/006-vk.png" alt="vk">
+				<img src="img/socials/007-facebook.png" alt="fb">
+				<img src="img/socials/001-twitter.png" alt="tw">
+				<img src="img/socials/002-youtube.png" alt="yb">
+				<img src="img/socials/003-telegram.png" alt="tg">
+				<img src="img/socials/004-instagram.png" alt="im">
+				<img src="img/socials/005-google-plus.png" alt="gp">
+			</div>
+			<a href="#">Политика конфиденциальности</a>
+		</div>
+	</footer>
+
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.scrollify.js"></script>
+	<script src="js/go_top.js"></script>
+	<script src="js/myscripts.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+	  ymaps.ready(function () {
+	    var myMap = new ymaps.Map("YMapsID", {
+	      center: [59.95, 30.33],
+	      zoom: 9
+	    });
+	    
+		var myPlacemark = new ymaps.Placemark([60.18, 30.35], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		
+		var myPlacemark1 = new ymaps.Placemark([59.95, 30.33], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		myMap.geoObjects.add(myPlacemark1);
+		myMap.geoObjects.add(myPlacemark);
+	  });
+	  ymaps.ready(function () {
+	    var myMap1 = new ymaps.Map("YMapsID-2", {
+	      center: [59.95, 30.33],
+	      zoom: 9
+	    });
+	    
+		var myPlacemark = new ymaps.Placemark([60.18, 30.35], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		
+		var myPlacemark1 = new ymaps.Placemark([59.95, 30.33], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		myMap1.geoObjects.add(myPlacemark1);
+		myMap1.geoObjects.add(myPlacemark);
+	  });
+	  ymaps.ready(function () {
+	    var myMap2 = new ymaps.Map("YMapsID-3", {
+	      center: [59.95, 30.33],
+	      zoom: 9
+	    });
+	    
+		var myPlacemark = new ymaps.Placemark([60.18, 30.35], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		
+		var myPlacemark1 = new ymaps.Placemark([59.95, 30.33], {}, {
+		    preset: 'islands#darkGreenIcon'
+		});
+		myMap2.geoObjects.add(myPlacemark1);
+		myMap2.geoObjects.add(myPlacemark);
+	  });
+	</script>
+</body>
+</html>
