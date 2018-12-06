@@ -1,3 +1,7 @@
+@import _fonts.sass
+@import _reset.sass
+@import _vars.sass
+
 //-----------------------------------------------------ABOUT--------------------------------------------------------
 //-----------------------------------------------------ABOUT--------------------------------------------------------
 //-----------------------------------------------------ABOUT--------------------------------------------------------
@@ -34,7 +38,7 @@
 	
 h2
 	color: #333
-	font-family: "Gotham Pro"
+	font-family: "Gotham Pro Black"
 	font-size: 36px
 	font-weight: 700
 	line-height: 79px
@@ -56,6 +60,12 @@ header
 .dop-page__wrapper
 	padding-bottom: 172px
 	border-bottom: 1px solid #b6b6b6 
+	@include desctop
+		padding-bottom: 88px
+	@include mob
+		padding-top: 107px
+		padding-bottom: 67px
+
 
 .center-side
 	height: auto
@@ -75,6 +85,8 @@ header
 		transition: 1s
 		// position: absolute
 		z-index: 100
+		@include desctop
+			padding-left: 108px
 		a
 			margin-bottom: 0px
 			display: inline-block
@@ -97,17 +109,45 @@ header
 .dop-page_container
 	h1
 		color: #333
-		font-family: "Gotham Pro"
+		font-family: "Gotham Pro Black"
 		font-size: 69px
 		font-weight: 700
 		line-height: 79px
 		margin-bottom: 87px 
-		margin-top: 118px 
+		margin-top: 0px
+		@include desctop
+			font-size: 58px
+		@include mob
+			font-size: 26px
+			margin-bottom: 60px
+			padding: 0 30px
+			font-family: 'Gotham Pro Black'
+	@include desctop
+		width: 1024px
+		margin: 0 auto
+		padding-right: 15px
+		padding-left: 108px
+	@include tablet
+		max-width: 640px
+		width: 100%
+		padding: 0 67px
+	@include mob
+		padding: 0
+.dop-page__center-side
+	.head_container
+		@include desctop
+			padding-top: 62px
+		@include mob
+			display: none
 .grid
 	display: flex
 	justify-content: flex-start
 	align-items: center
 	flex-wrap: wrap
+	@include desctop
+		margin-bottom: 131px
+	@include mob
+		margin-bottom: 70px
 	&-item
 		width: 31%
 		height: 156px
@@ -119,6 +159,13 @@ header
 		font-weight: 700
 		cursor: pointer
 		transition: 0.3s ease
+		@include desctop
+			width: 47%
+		@include tablet
+			width: 100%
+			margin: 0 0 10px 0
+		@include mob
+			height: 90px
 		.svg-container
 			width: 30%
 			height: 100%
@@ -136,6 +183,13 @@ header
 			width: 69%
 			height: 100%
 			vertical-align: top
+			@include desctop
+				font-size: 24px
+				font-weight: 300
+				max-width: 220px
+			@include mob
+				font-size: 20px
+				max-width: 200px
 			
 .grid-item__active
 	background: #d51317
@@ -151,26 +205,40 @@ header
 	height: 8px
 	background-color: #e8eeee
 	margin: 202px 0 125px
+	@include desctop
+		display: none
 
 .main-text
+	@include mob
+		padding: 0 30px
 	h2
 		color: #333333
 		font-family: "Gotham Pro"
 		font-size: 69px
 		font-weight: 700
 		line-height: 79px
-		margin-bottom: 85px 
+		margin-bottom: 85px
+		@include mob
+			font-size: 26px
+			margin-bottom: 30px
 	.both-side
 		display: flex
 		flex-wrap: nowrap
 		height: 924px
 		align-items: stretch
+		@include desctop
+			flex-direction: column
+			height: auto
 		.left-side
 			display: flex
 			flex-direction: column
 			justify-content: space-between
 			width: 69%
 			margin-right: 30px
+			@include desctop
+				width: 100%
+				margin-right: 0px
+				margin-bottom: 40px
 			.wrapper_flex
 				display: flex
 				justify-content: space-between
@@ -206,6 +274,12 @@ header
 				line-height: 39px
 				align-self: flex-start
 				flex-grow: 1
+				@include desctop
+					height: auto
+				@include mob
+					font-size: 16px
+					font-weight: 300
+					line-height: 24px
 				.square-red
 					display: inline-block
 					background-color: #d51317
@@ -219,12 +293,54 @@ header
 			justify-content: flex-end
 			width: 30%
 			position: relative
+			@include desctop
+				width: 100%
 			img
 				top: 0
 				left: 0
 				position: absolute
 				width: 769px
 				max-height: 709px
+				@include desctop
+					position: static
+					width: 100%
+			.btn-wrapper
+				display: flex
+				align-items: center
+				@include desctop
+					flex-direction: row-reverse
+					margin-top: 60px
+				@include tablet
+					display: none
+				.wrapper_flex
+					display: flex
+					align-items: center
+					@include desctop
+						margin-right: 40px
+					button
+						width: 292px
+						height: 70px
+						border-radius: 35px
+						background-color: #d51317
+						text-align: center
+						color: #ffffff
+						font-family: "Gotham Pro"
+						font-size: 22px
+						font-weight: 700
+						border: none
+						flex-grow: 1
+						margin-right: 40px
+						line-height: 70px
+						@include desctop
+							width: 270px
+						&:nth-child(2)
+							width: 290px
+							height: 70px
+							border-radius: 35px
+							border: 2px solid #d51317
+							background-color: transparent
+							color: #333
+							margin-right: 0px 
 			button
 				background: #DDD
 				border: none
@@ -244,9 +360,16 @@ header
 					vertical-align: baseline
 					transform: translate(0, 10%)
 
+
 //-----------------------------------------------------DOCUMENTATION--------------------------------------------------------
 //-----------------------------------------------------DOCUMENTATION--------------------------------------------------------
 //-----------------------------------------------------DOCUMENTATION--------------------------------------------------------
+
+.dop-pages__documentation
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
 
 .accordion
 	&-item
@@ -260,6 +383,8 @@ header
 				li
 					list-style: none
 					margin: 5px 0
+					@include mob
+						margin-bottom: 20px
 					a
 						display: inline-block
 						color: #333
@@ -269,6 +394,10 @@ header
 						line-height: 40px
 						text-decoration: underline
 						position: relative
+						@include tablet
+							font-size: 15px
+						@include mob
+							line-height: 16px
 						&:before
 							content: ''
 							position: absolute
@@ -279,6 +408,11 @@ header
 							background: url(../img/dop-pages/icons/download.png) no-repeat
 							background-size: 100% 100%
 							transform: translate(0, 20%)
+							@include mob
+								transform: translate(0, 0)
+								width: 15px
+								height: 15px
+								left: -30px
 							
 		&__header
 			width: 672px
@@ -288,6 +422,9 @@ header
 			display: flex
 			align-items: center
 			position: relative
+			cursor: pointer
+			@include tablet
+				width: 100%
 			p
 				display: inline-block
 				margin: 0
@@ -319,9 +456,22 @@ header
 //-----------------------------------------------------INFRASTRUCTURA--------------------------------------------------------
 //-----------------------------------------------------INFRASTRUCTURA--------------------------------------------------------
 
+.dop-page__infrastructure
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
+
 .dop-page__infrastructure__header
+	@include mob
+		padding: 0 30px
 	h1
 		display: inline-block
+		@include desctop
+			margin-bottom: 0px
+			display: block
+		@include mob
+			padding: 0
 	p
 		display: inline-block
 		color: #333
@@ -330,13 +480,25 @@ header
 		font-weight: 300
 		line-height: 79px
 		margin: 0 30px
+		@include mob
+			font-size: 20px
+			margin: 0px
+		&:nth-child(2)
+			@include desctop
+				margin: 0 30px 0 0
+			@include mob
+				margin: 0 10px 0 0
 		&:nth-child(3)
 			text-decoration: underline
 			margin: 0
 .dop-page__infrastructure__img
 	img
 		width: 100%
-		
+		@include tablet
+			width: 83vw
+		@include mob
+			width: 100%
+
 //-----------------------------------------------------IPOTEKA--------------------------------------------------------
 //-----------------------------------------------------IPOTEKA--------------------------------------------------------
 //-----------------------------------------------------IPOTEKA--------------------------------------------------------
@@ -529,17 +691,39 @@ header
 //-----------------------------------------------------NEWS--------------------------------------------------------
 //-----------------------------------------------------NEWS--------------------------------------------------------
 
+.dop-page__news
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
+
 .news
+	@include mob
+		padding: 0 30px
+	h1
+		@include mob
+			padding: 0px
+			margin-bottom: 20px
 	.new_wrapper
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		@include mob
+			flex-direction: column
 		.new
 			width: 33.33%
 			height: 513px
 			padding-right: 15px
 			margin-bottom: 88px
 			cursor: pointer
+			@include desctop
+				flex: 0 1 50%
+				padding-right: 30px
+			@include mob
+				flex: 1
+				width: 100%
+				padding-right: 0px
+				margin-bottom: 30px
 			img
 				width: 100%
 				margin-bottom: 10px 
@@ -571,6 +755,8 @@ header
 			display: inline-block
 			margin-right: 20px 
 			cursor: pointer
+			@include mob
+				margin-right: 10px
 			&__active
 				font-weight: 700 
 
@@ -581,16 +767,26 @@ header
 
 
 .komm-pomescheniya
+	h1
+		@include mob
+			margin-bottom: 225px
+			line-height: 32px
 	p
 		color: #333
 		font-family: 'Roboto Light'
 		font-size: 20px
 		font-weight: 300
 		line-height: 34px
-		margin-bottom: 30px 
+		margin-bottom: 30px
+		@include mob
+			display: none
 	table
 		width: 100%
 		text-align: center
+		@include mob
+			transform: rotate(-90deg) translate(0%, -86%)
+			width: 600px
+			margin-bottom: 180px
 		thead
 			th
 				color: #333
@@ -612,11 +808,17 @@ header
 				padding: 10px 0
 	h2
 		color: #333
-		font-family: "Gotham Pro"
+		font-family: "Gotham Pro Black"
 		font-size: 36px
 		font-weight: 700
 		line-height: 79px
-		margin: 82px 0 38px 
+		margin: 82px 0 38px
+		@include mob
+			font-size: 26px
+			margin-bottom: 60px
+			padding: 0 30px
+			margin-bottom: 225px
+			font-family: 'Gotham Pro Black'
 		
 
 //-----------------------------------------------------PARTNERS--------------------------------------------------------
@@ -624,13 +826,46 @@ header
 //-----------------------------------------------------PARTNERS--------------------------------------------------------
 
 .partners
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
+		padding-left: 30px
+		padding-right: 30px
+	h1
+		@include mob
+			padding: 0px
+			margin-bottom: 30px
+	h2
+		@include desctop
+			font-size: 36px
+			line-height: 48px
+			display: inline-block
+			&:nth-child(2)
+				max-width: 630px
+		@include mob
+			font-size: 20px
+			line-height: 25px
 	.partners__head
 		display: flex
 		justify-content: flex-start
 		align-items: top
+		flex-wrap: wrap
 		margin: 69px 0 94px
+		@include tablet
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin: 50px 0 14px
 		&__item
 			margin-right: 100px 
+			@include tablet
+				margin-right: 0px
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				margin-bottom: 60px
 			.head
 				color: #333
 				font-family: "Gotham Pro"
@@ -639,6 +874,8 @@ header
 				line-height: 27px
 	.small
 		font-size: 14px
+		@include desctop
+			line-height: 27px
 	.flex-wrapper
 		margin: 39px 0 61px
 		display: flex
@@ -652,14 +889,24 @@ header
 			display: flex
 			align-items: center
 			margin-bottom: 40px
+			@include desctop
+				margin-right: 0px
+			@include mob
+				display: flex
+				justify-content: center
 			
 //-----------------------------------------------------TEXT-PAGE--------------------------------------------------------
 //-----------------------------------------------------TEXT-PAGE--------------------------------------------------------
 //-----------------------------------------------------TEXT-PAGE--------------------------------------------------------
 
 .text-page
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
 	h1
-		margin-bottom: 44px 
+		margin-bottom: 44px
+		line-height: 52px
 	.time
 		color: #848484
 		font-family: 'Roboto Light'
@@ -685,41 +932,73 @@ header
 		justify-content: flex-start
 		align-items: top
 		flex-wrap: wrap
+		@include tablet
+			flex-direction: column
+			align-items: center
 		.team-item
 			width: 49%
 			display: flex
 			justify-content: space-between
 			background-color: #ececec
 			margin: 0 10px 60px 0
+			&:nth-child(even)
+				margin: 0 0 60px 0
+			@include desctop
+				height: 244px
+			@include tablet
+				width: 256px
+				height: auto
+				flex-direction: column
 			.img-wrapper
 				flex-grow: 1
-				width: 288px
+				width: 100%
 				height: 100%
 				img
 					height: 100%
+					@include tablet
+						width: 100%
+						height: unset
+				@include desctop
+					width: 196px
+				@include tablet
+					width: 100%
+					height: unset
+
 			.text-wrapper
 				flex-grow: 1
 				display: flex
 				flex-direction: column
 				justify-content: space-between
 				padding: 74px 31px 20px
+				@include desctop
+					padding: 51px 10px 51px 24px
 				.name
 					color: #333333
 					font-family: "Gotham Pro"
 					font-size: 26px
 					font-weight: 700
 					line-height: 33px
+					@include desctop
+						font-size: 18px
+						font-weight: 700
+						line-height: 22.28px
 				.job
 					color: #929292
 					font-family: 'Roboto Light'
 					font-size: 18px
 					font-weight: 300
 					line-height: 24px
+					@include desctop
+						font-size: 14px
+						line-height: 18px
+						margin-bottom: 29px
 				.tel
 					color: #333333
 					font-family: "Gotham Pro"
 					font-size: 16px
 					font-weight: 700
+					@include desctop
+						font-size: 15px
 					&:hover
 						color: #333
 						text-decoration: none
@@ -731,6 +1010,9 @@ header
 					line-height: 79px
 					position: relative
 					padding-left: 25px
+					@include desctop
+						font-size: 14px
+						line-height: 20px
 					&:before
 						content: ''
 						position: absolute
@@ -749,10 +1031,27 @@ header
 //-----------------------------------------------------RASPOLOJENIE--------------------------------------------------------
 
 .raspolojenie
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: unset
 	.dop-page__header
+		white-space: nowrap
+		@include tablet
+			white-space: wrap
+		@include mob
+			padding: 0 30px
 		h1
 			display: inline-block
-			margin-bottom: 30px 
+			margin-bottom: 30px
+			@include desctop
+				font-size: 47px
+			@include tablet
+				display: block
+				line-height: 30px
+			@include mob
+				padding: 0px
+				font-size: 26px
 		p
 			display: inline-block
 			color: #333333
@@ -760,16 +1059,41 @@ header
 			font-size: 26px
 			font-weight: 300
 			line-height: 79px
+			@include mob
+				font-size: 20px
+				line-height: 20px
 			&:nth-child(2)
-				margin: 0 64px 0 108px   
+				margin: 0 64px 0 108px
+				@include desctop
+					margin: 0 32px 0 58px 
+				@include tablet
+					margin: 0 32px 0 0
 			&:nth-child(3)
 				text-decoration: underline
 	.dop-page__main
+		@include mob
+			padding: 0 30px
+		p
+			@include desctop
+				font-size: 14px
+				line-height: 27px				
+		h2
+			@include desctop
+				font-size: 26px
+			@include tablet
+				line-height: 30px
+			@include mob
+				font-size: 20px
 		.map
 			margin: 40px 0
 			width: 1444px
 			height: 605px
-			background: #333 
+			background: #333
+			@include desctop
+				width: 918px
+				height: 385px
+			@include mob
+				width: calc(100vw - 30px)
 			
 //-----------------------------------------------------VIBRAT-KVARTIRU--------------------------------------------------------
 //-----------------------------------------------------VIBRAT-KVARTIRU--------------------------------------------------------

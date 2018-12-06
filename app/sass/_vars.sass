@@ -1,1 +1,17 @@
 $regular-color: #eee
+
+$desctop: 1370px
+$mob: 767px
+$tablet: 1023px
+
+@mixin desctop
+	@media screen and (max-width: $desctop)
+		@content
+
+@mixin mob
+	@media screen and (max-width: $mob)
+		@content
+
+@mixin tablet
+	@media screen and (max-width: $tablet)
+		@content
