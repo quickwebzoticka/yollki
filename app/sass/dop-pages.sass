@@ -627,6 +627,14 @@ header
 //-----------------------------------------------------USLOVIYA_POKUPKI--------------------------------------------------------
 
 .usloviya-pokupki
+	@include tablet
+		margin-top: -150px
+	@include mob
+		margin-top: 0px
+		padding: 0 30px
+	h1
+		@include mob
+			padding: 0px
 	p
 		width: 100%
 		color: #333333
@@ -634,6 +642,9 @@ header
 		font-size: 20px
 		font-weight: 300
 		line-height: 39px
+		@include mob
+			font-size: 14px
+			line-height: 25px
 	.red_stroke
 		padding-left: 40px
 		position: relative
@@ -645,12 +656,28 @@ header
 		 	width: 15px
 		 	height: 1px
 		 	background: #333
+		 	@include mob
+		 		top: 12px
 	.adv
 		display: flex
 		justify-content: space-between
 		margin: 76px 0
+		@include desctop
+			flex-wrap: wrap
+			justify-content: flex-start
+		@include mob
+			flex-direction: column
+			align-items: center
 		&-item
 			width: 194px
+			@include desctop
+				flex: 0 1 27%
+				margin-bottom: 60px
+				margin-right: 50px
+			@include mob
+				margin-right: 0px
+				flex: 1
+				text-align: center
 			img
 				margin-bottom: 33px 
 			p
@@ -685,7 +712,13 @@ header
 		font-weight: 700
 		border: none
 		flex-grow: 1
-		margin-right: 40px 
+		margin-right: 40px
+		@include mob
+			width: 260px
+			margin-right: 0px
+	.btn-wrapper
+		@include mob
+			text-align: center
  	
 //-----------------------------------------------------NEWS--------------------------------------------------------
 //-----------------------------------------------------NEWS--------------------------------------------------------
@@ -906,21 +939,55 @@ header
 		margin-top: 0px
 	h1
 		margin-bottom: 44px
-		line-height: 52px
+		line-height: 72px
+		@include desctop
+			max-width: 630px
+		@include tablet
+			max-width: 100%
+		@include mob
+			line-height: 30px
 	.time
 		color: #848484
 		font-family: 'Roboto Light'
 		font-size: 16px
 		font-weight: 300
 		line-height: 29px
+		@include mob
+			padding: 0 30px
 	.dop-page__main
 		margin: 54px 0 100px
 		display: flex
 		justify-content: space-between
 		align-items: top
+		@include desctop
+			margin: 60px 0
+		@include tablet
+			flex-direction: column
+			align-items: center
+		@include mob
+			padding: 0 30px
 		.img-wrapper
 		 	flex-grow: 1
 		 	margin-right: 100px
+		 	img
+		 		@include mob
+		 			width: 100%
+		 	@include desctop
+		 		margin-right: 50px
+		 	@include tablet
+		 		margin-right: 0px
+		 		margin-bottom: 60px
+	.dop-page__footer
+		@include mob
+			padding: 0 30px
+
+	.btn-back
+		@include desctop
+			width: 219px
+			height: 70px
+			border-radius: 35px
+			line-height: 70px
+			background-color: #e8eeee
 		 	
 //-----------------------------------------------------TEAM--------------------------------------------------------
 //-----------------------------------------------------TEAM--------------------------------------------------------
@@ -1103,9 +1170,17 @@ header
 .vibrat-kvartiru
 	.dop-page__center-side
 		background: url(../img/dop-pages/vibrat-kvartiru.png) no-repeat
-		background-size: 100%
+		background-size: 1920px
 		height: 1080px
 		position: relative
+		@include desctop
+			background-size: 1370px
+			height: 830px !important
+		@include mob
+			background-size: 771px
+			height: 380px !important
+		@media screen and (max-width: 640px)
+			background-position: -120px, 0
 		&:before
 			content: ''
 			position: absolute
@@ -1117,9 +1192,19 @@ header
 			animation: none
 			z-index: 0
 		.head_container
+			width: 100vw !important
 			z-index: 10
+			@include mob
+				display: block
+			@media screen and (max-width: 640px)
+				padding: 67px 34px 0 !important
 			a
 				color: #FFF
+				margin-left: 192px
+				@include desctop
+					margin-left: 60px
+				@include mob
+					display: none
 				img
 					height: 36px
 					width: 20px
@@ -1127,7 +1212,16 @@ header
 			.sold
 				text-align: center
 				width: 200px
-				margin: 200px 0 150px 70px
+				margin: 228px 0 150px 366px
+				@include desctop
+					margin: 43px 0 77px 272px
+				@include tablet
+					margin: 0px 0 77px 310px
+				@include mob
+					margin: 21px 0 10px 105px
+					transform: scale(0.6)
+				@media screen and (max-width: 640px)
+					margin: 21px 0 10px 15px
 				p
 					color: #fff
 					font-family: "Gotham Pro"
@@ -1145,6 +1239,17 @@ header
 				border: 9px solid #ffffff
 				background-color: #c0d513
 				border-radius: 50%
+				margin-left: 371px
+				cursor: pointer
+				@include desctop
+					margin-left: 275px
+				@include tablet
+					margin-left: 323px
+				@include mob
+					margin-left: 100px
+					transform: scale(0.6)
+				@media screen and (max-width: 640px)
+					margin-left: 33px
 				.text-wrapper
 					display: inline-block
 					transform: translate(0,40%)
