@@ -516,7 +516,6 @@ header {
     .head_contact-info .wrapper-flex ul {
       display: inline-block;
       padding: 0 61px 0 28px;
-      border-left: 3px solid #d51317;
       height: 122px;
       color: #ffffff;
       font-family: Roboto;
@@ -524,7 +523,31 @@ header {
       font-weight: 300;
       line-height: 34px;
       font-family: "Roboto Light";
-      font-weight: 300; }
+      font-weight: 300;
+      position: relative; }
+      .head_contact-info .wrapper-flex ul:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 0%;
+        top: 0;
+        left: 0;
+        width: 3px;
+        background-color: #d51317;
+        -webkit-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+        -webkit-transition-delay: 0.6s;
+             -o-transition-delay: 0.6s;
+                transition-delay: 0.6s; }
+      .head_contact-info .wrapper-flex ul:nth-child(2):before {
+        -webkit-transition-delay: 1.6s;
+             -o-transition-delay: 1.6s;
+                transition-delay: 1.6s; }
+      .head_contact-info .wrapper-flex ul:nth-child(3):before {
+        -webkit-transition-delay: 2.6s;
+             -o-transition-delay: 2.6s;
+                transition-delay: 2.6s; }
       .head_contact-info .wrapper-flex ul li {
         list-style: none;
         white-space: nowrap; }
@@ -571,6 +594,8 @@ header {
   -webkit-transition-delay: 0.6s !important;
        -o-transition-delay: 0.6s !important;
           transition-delay: 0.6s !important; }
+  .head_contact-info_wrapper_active .wrapper-flex ul:before {
+    height: 100%; }
 
 .head_contact-info_active {
   width: 100% !important; }

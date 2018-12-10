@@ -1200,7 +1200,7 @@ header
 				padding: 67px 34px 0 !important
 			a
 				color: #FFF
-				margin-left: 192px
+				margin-left: 292px
 				@include desctop
 					margin-left: 60px
 				@include mob
@@ -1270,9 +1270,11 @@ header
 .kvartira-2-ochered
 	.dop-page__center-side
 		background: url(../img/dop-pages/2ochered.png) no-repeat
-		background-size: 100%
+		background-size: 1920px
 		height: 1080px
 		position: relative
+		@include desctop
+			background-size: 1370px
 		&:before
 			content: ''
 			position: absolute
@@ -1284,6 +1286,7 @@ header
 			animation: none
 			z-index: 0
 		.head_container
+			width: 100vw
 			z-index: 10
 			a
 				color: #FFF
