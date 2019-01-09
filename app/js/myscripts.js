@@ -54,7 +54,7 @@ $(document).ready(function() {
 	};
 
 	function parallax(){
-		$('.nature_trees').css('transform', 'translate3d(0, ' + -(winPos * 0.3 - 300) + 'px, 0)');
+		$('.nature_trees').css('transform', 'translate3d(0, ' + -(winPos * 0.2 - 300) + 'px, 0)');
 	};
 
 	function openMenu() {

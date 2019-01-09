@@ -4,6 +4,7 @@ $desctop: 1370px
 $mob: 767px
 $tablet: 1023px
 $semi-tablet: 900px
+$semi-mob: 500px
 
 @mixin desctop
 	@media screen and (max-width: $desctop)
@@ -19,4 +20,9 @@ $semi-tablet: 900px
 
 @mixin semi-tablet
 	@media screen and (max-width: $semi-tablet)
+		@content
+
+
+@mixin semi-mob
+	@media screen and (max-width: $semi-mob)
 		@content

@@ -1280,6 +1280,9 @@ header
 			background-position: 0 79px
 		@include semi-tablet
 			background-position: -100px 79px
+		@include mob
+			background-size: 768px
+			background-position: -190px 79px
 		&:before
 			content: ''
 			position: absolute
@@ -1331,7 +1334,7 @@ header
 						bottom: -59px
 				.text-wrapper
 					display: inline-block
-					transform: translate(0,40%)
+					transform: translate(0, 40%)
 					p
 						color: #ffffff
 						font-family: "Gotham Pro"
@@ -1351,6 +1354,8 @@ header
 					margin: 0 0 50px 218px
 				@include semi-tablet
 					margin: 0 0 50px 118px
+				@include mob
+					margin: 0 0 50px 0px
 				.sale
 					display: inline-block
 					cursor: pointer
@@ -1364,6 +1369,8 @@ header
 							margin-left: 400px
 						@include tablet
 							margin-left: 250px
+						@include mob
+							margin-left: 200px
 			.section3
 				margin: 0 0 0 1260px
 				@include desctop
@@ -1372,6 +1379,8 @@ header
 					margin: 0 0 100px 700px
 				@include semi-tablet
 					margin: 0 0 50px 558px
+				@include mob
+					margin: -25px 0 125px 344px
 				.sale
 					cursor: pointer
 					@include mob
