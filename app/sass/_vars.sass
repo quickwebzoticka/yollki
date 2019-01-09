@@ -3,6 +3,7 @@ $regular-color: #eee
 $desctop: 1370px
 $mob: 767px
 $tablet: 1023px
+$semi-tablet: 900px
 
 @mixin desctop
 	@media screen and (max-width: $desctop)
@@ -14,4 +15,8 @@ $tablet: 1023px
 
 @mixin tablet
 	@media screen and (max-width: $tablet)
+		@content
+
+@mixin semi-tablet
+	@media screen and (max-width: $semi-tablet)
 		@content
