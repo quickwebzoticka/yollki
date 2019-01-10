@@ -1,10 +1,21 @@
 $regular-color: #eee
 
+$desctop1520: 1520px
+$desctop-wide: 1930px
 $desctop: 1370px
 $mob: 767px
 $tablet: 1023px
 $semi-tablet: 900px
 $semi-mob: 500px
+$semi-mob400: 400px
+
+@mixin desctop1520
+	@media screen and (max-width: $desctop1520)
+		@content
+
+@mixin desctop-wide
+	@media screen and (max-width: $desctop-wide)
+		@content
 
 @mixin desctop
 	@media screen and (max-width: $desctop)
@@ -25,4 +36,8 @@ $semi-mob: 500px
 
 @mixin semi-mob
 	@media screen and (max-width: $semi-mob)
+		@content
+
+@mixin semi-mob400
+	@media screen and (max-width: $semi-mob400)
 		@content

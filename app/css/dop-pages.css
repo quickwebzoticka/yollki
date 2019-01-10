@@ -41,6 +41,18 @@
 
 .btn-back {
   background: #DDD;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   color: #333;
   height: 70px;
@@ -57,9 +69,9 @@
     width: 30px;
     height: 30px;
     vertical-align: baseline;
-    -webkit-transform: translate(-40%, 20%) rotate(-90deg);
-        -ms-transform: translate(-40%, 20%) rotate(-90deg);
-            transform: translate(-40%, 20%) rotate(-90deg); }
+    -webkit-transform: translate(-40%, 0) rotate(-90deg);
+        -ms-transform: translate(-40%, 0) rotate(-90deg);
+            transform: translate(-40%, 0) rotate(-90deg); }
 
 h2 {
   color: #333;
@@ -1735,17 +1747,25 @@ header {
   background: url(../img/dop-pages/2ochered.png) no-repeat;
   -webkit-background-size: 1920px 1920px;
           background-size: 1920px;
+  background-position: -200px 0;
   height: 1080px;
   position: relative; }
+  @media screen and (max-width: 1930px) {
+    .kvartira-2-ochered .dop-page__center-side {
+      background-position: 0; } }
+  @media screen and (max-width: 1520px) {
+    .kvartira-2-ochered .dop-page__center-side {
+      background-position: -200px 0; } }
   @media screen and (max-width: 1370px) {
     .kvartira-2-ochered .dop-page__center-side {
-      -webkit-background-size: 1370px 1370px;
-              background-size: 1370px; } }
+      -webkit-background-size: 1600px 1600px;
+              background-size: 1600px;
+      background-position: -250px 0; } }
   @media screen and (max-width: 1023px) {
     .kvartira-2-ochered .dop-page__center-side {
       -webkit-background-size: 1024px 1024px;
               background-size: 1024px;
-      background-position: 0 79px; } }
+      background-position: -100px 79px; } }
   @media screen and (max-width: 900px) {
     .kvartira-2-ochered .dop-page__center-side {
       background-position: -100px 79px; } }
@@ -1754,6 +1774,16 @@ header {
       -webkit-background-size: 768px 768px;
               background-size: 768px;
       background-position: -190px 79px; } }
+  @media screen and (max-width: 500px) {
+    .kvartira-2-ochered .dop-page__center-side {
+      background-position: -111px 79px;
+      -webkit-background-size: 600px 600px;
+              background-size: 600px; } }
+  @media screen and (max-width: 400px) {
+    .kvartira-2-ochered .dop-page__center-side {
+      background-position: -175px 79px;
+      -webkit-background-size: 582px 582px;
+              background-size: 582px; } }
   .kvartira-2-ochered .dop-page__center-side:before {
     content: '';
     position: absolute;
@@ -1833,20 +1863,29 @@ header {
               font-size: 12px;
               line-height: 18px; } }
     .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
-      margin: 100px 0 250px 448px;
+      margin: 100px 0 250px 238px;
       white-space: nowrap; }
+      @media screen and (max-width: 1930px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
+          margin: 100px 0 250px 438px; } }
+      @media screen and (max-width: 1520px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
+          margin: 100px 0 250px 238px; } }
       @media screen and (max-width: 1370px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
-          margin: 0 0 150px 340px; } }
+          margin: 0 0 150px 151px; } }
       @media screen and (max-width: 1023px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
-          margin: 0 0 50px 218px; } }
+          margin: 0 0 50px 118px; } }
       @media screen and (max-width: 900px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
           margin: 0 0 50px 118px; } }
       @media screen and (max-width: 767px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
           margin: 0 0 50px 0px; } }
+      @media screen and (max-width: 400px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section12 {
+          margin: 0 0 50px -43px; } }
       .kvartira-2-ochered .dop-page__center-side .head_container .section12 .sale {
         display: inline-block;
         cursor: pointer; }
@@ -1855,6 +1894,11 @@ header {
             width: 105px;
             height: 105px;
             border: 5px solid #FFF; } }
+        @media screen and (max-width: 500px) {
+          .kvartira-2-ochered .dop-page__center-side .head_container .section12 .sale {
+            -webkit-transform: scale(0.7);
+                -ms-transform: scale(0.7);
+                    transform: scale(0.7); } }
         .kvartira-2-ochered .dop-page__center-side .head_container .section12 .sale:nth-child(2) {
           margin-left: 550px; }
           @media screen and (max-width: 1370px) {
@@ -1866,20 +1910,35 @@ header {
           @media screen and (max-width: 767px) {
             .kvartira-2-ochered .dop-page__center-side .head_container .section12 .sale:nth-child(2) {
               margin-left: 200px; } }
+          @media screen and (max-width: 500px) {
+            .kvartira-2-ochered .dop-page__center-side .head_container .section12 .sale:nth-child(2) {
+              margin-left: 119px; } }
     .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
-      margin: 0 0 0 1260px; }
+      margin: 0 0 0 1000px; }
+      @media screen and (max-width: 1930px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
+          margin: 0 0 0 1200px; } }
+      @media screen and (max-width: 1520px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
+          margin: 0 0 0 1000px; } }
       @media screen and (max-width: 1370px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
-          margin: 0 0 200px 900px; } }
+          margin: 0 0 131px 740px; } }
       @media screen and (max-width: 1023px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
-          margin: 0 0 100px 700px; } }
+          margin: 0 0 50px 558px; } }
       @media screen and (max-width: 900px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
           margin: 0 0 50px 558px; } }
       @media screen and (max-width: 767px) {
         .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
           margin: -25px 0 125px 344px; } }
+      @media screen and (max-width: 500px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
+          margin: -55px 0 125px 263px; } }
+      @media screen and (max-width: 400px) {
+        .kvartira-2-ochered .dop-page__center-side .head_container .section3 {
+          margin: -55px 0 101px 170px; } }
       .kvartira-2-ochered .dop-page__center-side .head_container .section3 .sale {
         cursor: pointer; }
         @media screen and (max-width: 767px) {
@@ -1887,6 +1946,28 @@ header {
             width: 105px;
             height: 105px;
             border: 5px solid #FFF; } }
+        @media screen and (max-width: 500px) {
+          .kvartira-2-ochered .dop-page__center-side .head_container .section3 .sale {
+            -webkit-transform: scale(0.7);
+                -ms-transform: scale(0.7);
+                    transform: scale(0.7); } }
+
+@media screen and (max-width: 1024px) {
+  .kvartira-planirovka {
+    margin-top: -200px; } }
+
+@media screen and (max-width: 1023px) {
+  .kvartira-planirovka {
+    margin-top: -200px; } }
+
+@media screen and (max-width: 767px) {
+  .kvartira-planirovka {
+    margin-top: 0px; } }
+
+@media screen and (max-width: 500px) {
+  .kvartira-planirovka {
+    width: 95%;
+    margin: 0 auto; } }
 
 .kvartira-planirovka .dop-page__top {
   margin: 128px 0 60px;
@@ -1894,21 +1975,42 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: top;
-  -webkit-align-items: top;
-      -ms-flex-align: top;
-          align-items: top; }
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media screen and (max-width: 1370px) {
+    .kvartira-planirovka .dop-page__top {
+      margin: 28px 0 60px; } }
+  @media screen and (max-width: 1023px) {
+    .kvartira-planirovka .dop-page__top {
+      margin: 28px 0 20px; } }
+  @media screen and (max-width: 500px) {
+    .kvartira-planirovka .dop-page__top {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
   .kvartira-planirovka .dop-page__top .name {
     display: inline-block;
     color: #333;
     font-family: "Gotham Pro";
     font-size: 26px;
     font-weight: 300; }
+    @media screen and (max-width: 1023px) {
+      .kvartira-planirovka .dop-page__top .name {
+        font-size: 20px;
+        line-height: 24px; } }
   .kvartira-planirovka .dop-page__top .floor {
     vertical-align: top;
     display: inline-block;
     position: relative;
     margin: 0 86px 0 65px; }
+    @media screen and (max-width: 1023px) {
+      .kvartira-planirovka .dop-page__top .floor {
+        margin: 0 25px 0 30px; } }
+    @media screen and (max-width: 500px) {
+      .kvartira-planirovka .dop-page__top .floor {
+        margin-right: auto; } }
     .kvartira-planirovka .dop-page__top .floor__name {
       color: #333333;
       font-family: "Gotham Pro";
@@ -1917,6 +2019,9 @@ header {
       line-height: 79px;
       width: 150px;
       text-align: center; }
+      @media screen and (max-width: 1023px) {
+        .kvartira-planirovka .dop-page__top .floor__name {
+          font-size: 24px; } }
     .kvartira-planirovka .dop-page__top .floor__arrow-up {
       position: absolute;
       cursor: pointer;
@@ -1930,6 +2035,9 @@ header {
       background: url(../img/dop-pages/kvartira-planirovka/arrow.png) no-repeat;
       -webkit-background-size: 100% 100%;
               background-size: 100%; }
+      @media screen and (max-width: 1023px) {
+        .kvartira-planirovka .dop-page__top .floor__arrow-up {
+          top: -20px; } }
     .kvartira-planirovka .dop-page__top .floor__arrow-down {
       position: absolute;
       cursor: pointer;
@@ -1943,8 +2051,14 @@ header {
       background: url(../img/dop-pages/kvartira-planirovka/arrow.png) no-repeat;
       -webkit-background-size: 100% 100%;
               background-size: 100%; }
+      @media screen and (max-width: 1023px) {
+        .kvartira-planirovka .dop-page__top .floor__arrow-down {
+          bottom: -15px; } }
   .kvartira-planirovka .dop-page__top .marks {
     display: inline-block; }
+    @media screen and (max-width: 500px) {
+      .kvartira-planirovka .dop-page__top .marks {
+        margin-top: 50px; } }
     .kvartira-planirovka .dop-page__top .marks ul {
       display: inline-block;
       vertical-align: top;
@@ -1992,6 +2106,24 @@ header {
   line-height: 79px;
   text-decoration: underline; }
 
+@media screen and (max-width: 1024px) {
+  .kvartira {
+    margin-top: -200px; } }
+
+@media screen and (max-width: 1023px) {
+  .kvartira {
+    margin-top: -200px; } }
+
+@media screen and (max-width: 767px) {
+  .kvartira {
+    margin-top: 0px; } }
+
+@media screen and (max-width: 1023px) {
+  .kvartira .dop-page_container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 100%; } }
+
 .kvartira .dop-page__top {
   margin-top: 106px;
   display: -webkit-box;
@@ -2006,15 +2138,64 @@ header {
   -webkit-align-items: top;
       -ms-flex-align: top;
           align-items: top; }
+  @media screen and (max-width: 1023px) {
+    .kvartira .dop-page__top {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media screen and (max-width: 767px) {
+    .kvartira .dop-page__top {
+      margin-top: 20px; } }
+  @media screen and (max-width: 500px) {
+    .kvartira .dop-page__top {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
   .kvartira .dop-page__top .btn-back {
     width: auto;
-    padding: 0 40px; }
+    padding: 0 40px;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
+    @media screen and (max-width: 1023px) {
+      .kvartira .dop-page__top .btn-back {
+        font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .kvartira .dop-page__top .btn-back {
+        padding: 0 20px;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1; } }
   .kvartira .dop-page__top p {
     color: #333;
     font-family: 'Roboto Light';
     font-size: 26px;
     font-weight: 700;
     line-height: 86px; }
+    @media screen and (max-width: 1023px) {
+      .kvartira .dop-page__top p {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 0px; } }
   .kvartira .dop-page__top .bolded {
     color: #333;
     font-family: "Gotham Pro";
@@ -2022,6 +2203,17 @@ header {
     font-weight: 700;
     line-height: 79px;
     margin: 0 76px; }
+    @media screen and (max-width: 1023px) {
+      .kvartira .dop-page__top .bolded {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 45px; } }
+    @media screen and (max-width: 767px) {
+      .kvartira .dop-page__top .bolded {
+        margin: 0 15px; } }
+    @media screen and (max-width: 500px) {
+      .kvartira .dop-page__top .bolded {
+        margin: 15px 0; } }
 
 .kvartira .dop-page__main {
   display: -webkit-box;
@@ -2036,11 +2228,24 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 1023px) {
+    .kvartira .dop-page__main {
+      margin-top: 40px; } }
+  @media screen and (max-width: 500px) {
+    .kvartira .dop-page__main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column;
+          -ms-flex-flow: column;
+              flex-flow: column; } }
   .kvartira .dop-page__main .left-side {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1;
+    margin-right: 20px; }
+    .kvartira .dop-page__main .left-side img {
+      width: 100%; }
   .kvartira .dop-page__main .right-side {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -2053,6 +2258,9 @@ header {
       font-size: 22px;
       font-weight: 300;
       line-height: 38px; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__main .right-side ul li {
+          font-size: 16px; } }
     .kvartira .dop-page__main .right-side p {
       color: #333;
       font-size: 20px;
@@ -2060,6 +2268,9 @@ header {
       line-height: 39px;
       font-family: "Roboto Light";
       font-weight: 300; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__main .right-side p {
+          font-size: 16px; } }
       .kvartira .dop-page__main .right-side p a {
         font-family: "Roboto Bold";
         font-size: 26px;
@@ -2072,8 +2283,17 @@ header {
       font-size: 36px;
       font-weight: 700;
       line-height: 79px; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__main .right-side .number {
+          line-height: 25px;
+          font-size: 24px; } }
     .kvartira .dop-page__main .right-side button {
       margin: 30px 0; }
+      @media screen and (max-width: 767px) {
+        .kvartira .dop-page__main .right-side button {
+          margin: 15px 0;
+          width: 250px;
+          font-size: 18px; } }
     .kvartira .dop-page__main .right-side .discount {
       margin-top: 89px;
       color: #333;
@@ -2081,6 +2301,12 @@ header {
       font-size: 26px;
       font-weight: 700;
       line-height: 45px; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__main .right-side .discount {
+          margin-top: 30px; } }
+      @media screen and (max-width: 767px) {
+        .kvartira .dop-page__main .right-side .discount {
+          font-size: 20px; } }
 
 .kvartira .dop-page__footer {
   margin-top: 40px; }
@@ -2100,6 +2326,13 @@ header {
     width: 100%;
     padding: 0 5px;
     margin-bottom: 20px; }
+    @media screen and (max-width: 500px) {
+      .kvartira .dop-page__footer .flex-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: column;
+            -ms-flex-flow: column;
+                flex-flow: column; } }
     .kvartira .dop-page__footer .flex-wrapper button {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 292px;
@@ -2115,8 +2348,18 @@ header {
       font-family: 'Roboto light';
       font-size: 22px;
       font-weight: 300;
-      line-height: 38px;
+      line-height: 23px;
       margin: 0 5px; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__footer .flex-wrapper button {
+          font-size: 16px; } }
+      @media screen and (max-width: 500px) {
+        .kvartira .dop-page__footer .flex-wrapper button {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          margin-bottom: 20px; } }
     .kvartira .dop-page__footer .flex-wrapper a {
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 292px;
@@ -2130,6 +2373,16 @@ header {
       font-size: 26px;
       font-weight: 700;
       text-decoration: underline; }
+      @media screen and (max-width: 1023px) {
+        .kvartira .dop-page__footer .flex-wrapper a {
+          font-size: 18px; } }
+      @media screen and (max-width: 500px) {
+        .kvartira .dop-page__footer .flex-wrapper a {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          margin-bottom: 20px; } }
 
 @media only screen and (max-width: 1370px) {
   .wrapper {

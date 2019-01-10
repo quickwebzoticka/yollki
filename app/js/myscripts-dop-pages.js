@@ -42,14 +42,14 @@ $(document).ready(function() {
 	function shortMenu(){
 		$('.left-menu').addClass('left-menu_active');
 		$('.logo').addClass('logo_active');
-		$('.nav').css({
-			display: 'none',
-			opacity: '0'
-		});
 		if (width <= 1024) {
-			$('.menu').removeClass('menu_active')
+			$('.menu').removeClass('menu_active');
+			$('.nav').slideUp('slow');
 		} else {
 			$('.menu').fadeIn('fast');
+			$('.nav').animate({opacity: 0}, 500, function(){
+				$(this).css('display','none');
+			});
 		}
 	};
 
@@ -296,6 +296,7 @@ $(document).ready(function() {
 	  function getNumber() {
 	  	number = $('.floor__name .number').html();
 	  	number = parseInt(number);
+	  	return number;
 	  }
 
 	  function switchImg(number) {
@@ -303,9 +304,9 @@ $(document).ready(function() {
   		$('.img-wrapper:eq(' + (number - 1) + ')').addClass('img__active');
 	  }
 
-  	  $('body').on('click', '.floor__arrow-up', function(event) {
+  	  $(document).on('click', '.floor__arrow-up', function(event) {
   	  	event.preventDefault();
-  	  	getNumber();
+  	  	let number = getNumber();
   	  	if (number >= 1 && number < 12) {
   	  		number = ++number;
   	  		$('.floor__name .number').html(number);
@@ -313,9 +314,9 @@ $(document).ready(function() {
   	  	switchImg(number);
   	  });
 
-  	  $('body').on('click', '.floor__arrow-down', function(event) {
+  	  $(document).on('click', '.floor__arrow-down', function(event) {
   	  	event.preventDefault();
-  	  	getNumber();
+  	  	let number = getNumber();
   	  	if (number > 1 && number <= 12) {
   	  		number = --number;
   	  		$('.floor__name .number').html(number);

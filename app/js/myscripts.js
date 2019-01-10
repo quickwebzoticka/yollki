@@ -34,14 +34,15 @@ $(document).ready(function() {
 	function shortMenu(){
 		$('.left-menu').addClass('left-menu_active');
 		$('.logo').addClass('logo_active');
-		$('.nav').css({
-			display: 'none',
-			opacity: '0'
-		});
+		
 		if (width <= 1024) {
-			$('.menu').removeClass('menu_active')
+			$('.menu').removeClass('menu_active');
+			$('.nav').slideUp('slow');
 		} else {
 			$('.menu').fadeIn('fast');
+			$('.nav').animate({opacity: 0}, 500, function(){
+				$(this).css('display','none');
+			});
 		}
 	};
 

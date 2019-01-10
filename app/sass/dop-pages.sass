@@ -19,6 +19,9 @@
 
 .btn-back
 	background: #DDD
+	display: flex
+	align-items: center
+	justify-content: center
 	border: none
 	color: #333
 	height: 70px
@@ -34,7 +37,7 @@
 		width: 30px
 		height: 30px
 		vertical-align: baseline
-		transform: translate(-40%, 20%) rotate(-90deg)
+		transform: translate(-40%, 0) rotate(-90deg)
 	
 h2
 	color: #333
@@ -1271,18 +1274,30 @@ header
 	.dop-page__center-side
 		background: url(../img/dop-pages/2ochered.png) no-repeat
 		background-size: 1920px
+		background-position: -200px 0
 		height: 1080px
 		position: relative
+		@include desctop-wide
+			background-position: 0
+		@include desctop1520
+			background-position: -200px 0
 		@include desctop
-			background-size: 1370px
+			background-size: 1600px
+			background-position: -250px 0
 		@include tablet
 			background-size: 1024px
-			background-position: 0 79px
+			background-position: -100px 79px
 		@include semi-tablet
 			background-position: -100px 79px
 		@include mob
 			background-size: 768px
 			background-position: -190px 79px
+		@include semi-mob
+			background-position: -111px 79px
+			background-size: 600px
+		@include semi-mob400
+			background-position: -175px 79px
+			background-size: 582px
 		&:before
 			content: ''
 			position: absolute
@@ -1346,16 +1361,22 @@ header
 							font-size: 12px
 							line-height: 18px
 			.section12
-				margin: 100px 0 250px 448px
+				margin: 100px 0 250px 238px
 				white-space: nowrap
+				@include desctop-wide
+					margin: 100px 0 250px 438px
+				@include desctop1520
+					margin: 100px 0 250px 238px
 				@include desctop
-					margin: 0 0 150px 340px
+					margin: 0 0 150px 151px
 				@include tablet
-					margin: 0 0 50px 218px
+					margin: 0 0 50px 118px
 				@include semi-tablet
 					margin: 0 0 50px 118px
 				@include mob
 					margin: 0 0 50px 0px
+				@include semi-mob400
+					margin: 0 0 50px -43px
 				.sale
 					display: inline-block
 					cursor: pointer
@@ -1363,6 +1384,8 @@ header
 						width: 105px
 						height: 105px
 						border: 5px solid #FFF
+					@include semi-mob
+						transform: scale(0.7)
 					&:nth-child(2)
 						margin-left: 550px
 						@include desctop
@@ -1371,22 +1394,35 @@ header
 							margin-left: 250px
 						@include mob
 							margin-left: 200px
+						@include semi-mob
+							margin-left: 119px
+
 			.section3
-				margin: 0 0 0 1260px
+				margin: 0 0 0 1000px
+				@include desctop-wide
+					margin: 0 0 0 1200px
+				@include desctop1520
+					margin: 0 0 0 1000px
 				@include desctop
-					margin: 0 0 200px 900px
+					margin: 0 0 131px 740px
 				@include tablet
-					margin: 0 0 100px 700px
+					margin: 0 0 50px 558px
 				@include semi-tablet
 					margin: 0 0 50px 558px
 				@include mob
 					margin: -25px 0 125px 344px
+				@include semi-mob
+					margin: -55px 0 125px 263px
+				@include semi-mob400
+					margin: -55px 0 101px 170px
 				.sale
 					cursor: pointer
 					@include mob
 						width: 105px
 						height: 105px
 						border: 5px solid #FFF
+					@include semi-mob
+						transform: scale(0.7)
 				
 //-----------------------------------------------------KVARTIRA-PLANIROVKA-----------------------------------------------------
 //-----------------------------------------------------KVARTIRA-PLANIROVKA-----------------------------------------------------
@@ -1394,21 +1430,43 @@ header
 
 
 .kvartira-planirovka
+	@media screen and (max-width: 1024px)
+		margin-top: -200px
+	@include tablet
+		margin-top: -200px
+	@include mob
+		margin-top: 0px
+	@include semi-mob
+		width: 95%
+		margin: 0 auto
 	.dop-page__top
 		margin: 128px 0 60px
 		display: flex
-		align-items: top
+		align-items: flex-start
+		@include desctop
+			margin: 28px 0 60px
+		@include tablet
+			margin: 28px 0 20px
+		@include semi-mob
+			flex-wrap: wrap
 		.name
 			display: inline-block
 			color: #333
 			font-family: "Gotham Pro"
 			font-size: 26px
 			font-weight: 300
+			@include tablet
+				font-size: 20px
+				line-height: 24px
 		.floor
 			vertical-align: top
 			display: inline-block
 			position: relative
 			margin: 0 86px 0 65px
+			@include tablet
+				margin: 0 25px 0 30px
+			@include semi-mob
+				margin-right: auto
 			&__name
 				color: #333333
 				font-family: "Gotham Pro"
@@ -1417,6 +1475,8 @@ header
 				line-height: 79px
 				width: 150px
 				text-align: center
+				@include tablet
+					font-size: 24px
 			&__arrow-up 
 				position: absolute
 				cursor: pointer
@@ -1427,6 +1487,8 @@ header
 				height: 29px
 				background: url(../img/dop-pages/kvartira-planirovka/arrow.png) no-repeat
 				background-size: 100%
+				@include tablet
+					top: -20px
 			&__arrow-down
 				position: absolute
 				cursor: pointer
@@ -1437,8 +1499,12 @@ header
 				height: 29px
 				background: url(../img/dop-pages/kvartira-planirovka/arrow.png) no-repeat
 				background-size: 100%
+				@include tablet
+					bottom: -15px
 		.marks
 			display: inline-block
+			@include semi-mob
+				margin-top: 50px
 			ul
 				display: inline-block
 				vertical-align: top
@@ -1490,20 +1556,52 @@ header
 //-----------------------------------------------------KVARTIRA-----------------------------------------------------
 
 .kvartira
+	@media screen and( max-width: 1024px )
+		margin-top: -200px
+	@include tablet
+		margin-top: -200px
+	@include mob
+		margin-top: 0px
+	.dop-page_container
+		@include tablet
+			width: 95%
+			margin: 0 auto
+			max-width: 100%
 	.dop-page__top
 		margin-top: 106px 
 		display: flex
 		justify-content: flex-start
 		align-items: top
+		@include tablet
+			align-items: center
+		@include mob
+			margin-top: 20px
+		@include semi-mob
+			flex-flow: column
+			align-items: flex-start
 		.btn-back
 			width: auto
 			padding: 0 40px
+			line-height: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			@include tablet
+				font-size: 16px
+			@include mob
+				padding: 0 20px
+				flex: 1
 		p
 			color: #333
 			font-family: 'Roboto Light'
 			font-size: 26px
 			font-weight: 700
 			line-height: 86px
+			@include tablet
+				font-size: 16px
+				line-height: 20px
+				margin-bottom: 0px
 		.bolded
 			color: #333
 			font-family: "Gotham Pro"
@@ -1511,12 +1609,27 @@ header
 			font-weight: 700
 			line-height: 79px
 			margin: 0 76px
+			@include tablet
+				font-size: 16px
+				line-height: 20px
+				margin: 0 45px
+			@include mob
+				margin: 0 15px
+			@include semi-mob
+				margin: 15px 0
 	.dop-page__main
 		display: flex
 		justify-content: space-between
 		align-items: center
+		@include tablet
+			margin-top: 40px
+		@include semi-mob
+			flex-flow: column
 		.left-side
 			flex-grow: 1
+			margin-right: 20px
+			img
+				width: 100%
 		.right-side
 			flex-grow: 1
 			ul
@@ -1527,6 +1640,8 @@ header
 					font-size: 22px
 					font-weight: 300
 					line-height: 38px
+					@include tablet
+						font-size: 16px
 			p
 				color: #333
 				font-size: 20px
@@ -1534,6 +1649,8 @@ header
 				line-height: 39px
 				font-family: "Roboto Light"
 				font-weight: 300
+				@include tablet
+					font-size: 16px
 				a
 					font-family: "Roboto Bold"
 					font-size: 26px
@@ -1546,8 +1663,15 @@ header
 				font-size: 36px
 				font-weight: 700
 				line-height: 79px
+				@include tablet
+					line-height: 25px
+					font-size: 24px
 			button
 				margin: 30px 0 
+				@include mob
+					margin: 15px 0
+					width: 250px
+					font-size: 18px
 			.discount
 				margin-top: 89px 
 				color: #333
@@ -1555,6 +1679,10 @@ header
 				font-size: 26px
 				font-weight: 700
 				line-height: 45px
+				@include tablet
+					margin-top: 30px
+				@include mob
+					font-size: 20px
 	.dop-page__footer
 		margin-top: 40px 
 		.flex-wrapper
@@ -1563,7 +1691,9 @@ header
 			align-items: center
 			width: 100%
 			padding: 0 5px
-			margin-bottom: 20px 
+			margin-bottom: 20px
+			@include semi-mob
+				flex-flow: column
 			button
 				flex: 1 1 292px
 				width: 292px
@@ -1575,8 +1705,13 @@ header
 				font-family: 'Roboto light'
 				font-size: 22px
 				font-weight: 300
-				line-height: 38px
+				line-height: 23px
 				margin: 0 5px
+				@include tablet
+					font-size: 16px
+				@include semi-mob
+					flex: 1
+					margin-bottom: 20px
 			a
 				flex: 1 1 292px
 				text-align: center
@@ -1587,8 +1722,11 @@ header
 				font-size: 26px
 				font-weight: 700
 				text-decoration: underline
-				// &:nth-child(2)
-				// 	margin: 0 30px
+				@include tablet
+					font-size: 18px
+				@include semi-mob
+					flex: 1
+					margin-bottom: 20px
 				
 
 @media only screen and (max-width: 1370px)
