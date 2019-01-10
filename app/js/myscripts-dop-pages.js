@@ -47,9 +47,7 @@ $(document).ready(function() {
 			$('.nav').slideUp('slow');
 		} else {
 			$('.menu').fadeIn('fast');
-			$('.nav').animate({opacity: 0}, 500, function(){
-				$(this).css('display','none');
-			});
+			$('.nav').fadeOut('fast');
 		}
 	};
 
