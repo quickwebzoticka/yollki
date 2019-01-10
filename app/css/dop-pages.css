@@ -2094,7 +2094,8 @@ header {
   .kvartira-planirovka .dop-page__main-img .img-wrapper {
     display: none; }
     .kvartira-planirovka .dop-page__main-img .img-wrapper img {
-      width: 100%; }
+      width: 100%;
+      cursor: pointer; }
   .kvartira-planirovka .dop-page__main-img .img__active {
     display: block; }
 
